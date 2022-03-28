@@ -13,4 +13,4 @@
 #### ΘΕΟΔΩΡΟΥ ΙΩΑΝΝΗΣ
 #### ΚΑΤΣΑΡΕΒΙΤΣ ΑΛΕΞΑΝΔΡΟΣ
 
-#### [Ρόλοι](https://github.com/alexgr1996/Squize/wiki/Roles)
+#### [wiki](https://github.com/alexgr1996/Squize/wiki)
