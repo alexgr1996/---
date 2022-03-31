@@ -7,10 +7,10 @@
 
 ## Η Ομάδα
 
-#### [ΣΟΥΛΟΥΚΟΣ ΝΙΚΟΛΑΟΣ][https://github.com/Nikolaos987]
-#### ΓΕΩΡΓΙΑΔΟΥ ΓΕΩΡΓΙΑ
-#### ΚΑΛΛΕΑΣ ΓΕΩΡΓΙΟΣ
-#### ΘΕΟΔΩΡΟΥ ΙΩΑΝΝΗΣ
-#### ΚΑΤΣΑΡΕΒΙΤΣ ΑΛΕΞΑΝΔΡΟΣ
+#### [ΣΟΥΛΟΥΚΟΣ ΝΙΚΟΛΑΟΣ](https://github.com/Nikolaos987)
+#### [ΓΕΩΡΓΙΑΔΟΥ ΓΕΩΡΓΙΑ](https://github.com/JojoHojo)
+#### [ΚΑΛΛΕΑΣ ΓΕΩΡΓΙΟΣ](https://github.com/georgekalleas)
+#### [ΘΕΟΔΩΡΟΥ ΙΩΑΝΝΗΣ](https://github.com/Johntheo95)
+#### [ΚΑΤΣΑΡΕΒΙΤΣ ΑΛΕΞΑΝΔΡΟΣ](https://github.com/alexgr1996)
 
 # [Wiki](https://github.com/alexgr1996/Squize/wiki)
