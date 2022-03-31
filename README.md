@@ -13,4 +13,4 @@
 #### ΘΕΟΔΩΡΟΥ ΙΩΑΝΝΗΣ
 #### ΚΑΤΣΑΡΕΒΙΤΣ ΑΛΕΞΑΝΔΡΟΣ
 
-#### [wiki](https://github.com/alexgr1996/Squize/wiki)
+# [wiki](https://github.com/alexgr1996/Squize/wiki)
