@@ -16,7 +16,6 @@ create table Quiz_Executions(
 
 CREATE TABLE Assessments (
   AsID INT AUTO_INCREMENT PRIMARY KEY,
-  UserId int FOREIGN KEY REFERENCES Users(UserId),
   ExecId int FOREIGN KEY REFERENCES Quiz_excecutions(ExecId),
   Assessment_Category VARCHAR(255) NOT NULL,
   Assessment_Difficulty INT NOT NULL,
