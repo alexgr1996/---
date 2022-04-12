@@ -24,7 +24,7 @@ CREATE TABLE Assessments (
   Assessment_Title VARCHAR(255), 
   QID VARCHAR(255) NOT NULL,
   CoAnID VARCHAR(255) NOT NULL,  /*check  for the function if needed to be able to have more than 1 correct anwser */
-  WrAID VARCHAR(255) NOT NULL
+  WrAID VARCHAR(255) NOT NULL,
   FOREIGN KEY (ExecId) REFERENCES Quiz_excecutions(ExecId)
   
  
