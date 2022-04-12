@@ -10,7 +10,7 @@ create table Quiz_Executions(
 	 UserId int FOREIGN KEY REFERENCES Users(UserId),
   AsID int FOREIGN KEY REFERENCES Assessments(AsID),
 	 quiz_date timestamp,
-	 quiz_sxore int not null,
+	 quiz_sxore int not null
 	 
 );
 
