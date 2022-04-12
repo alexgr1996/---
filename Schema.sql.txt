@@ -1,0 +1,12 @@
+CREATE TABLE Assessments (
+ AsID INT AUTO_INCREMENT PRIMARY KEY,
+ Assessment_Category VARCHAR(255) NOT NULL,
+ Assessment_Difficulty INT NOT NULL,
+ Assessment_Creator VARCHAR(255) NOT NULL ,
+ Assessment_Title VARCHAR(255), 
+ QID VARCHAR(255) NOT NULL,
+ CoAnID VARCHAR(255) NOT NULL,  /*check  for the function if needed to be able to have more than 1 correct anwser */
+ WrAID VARCHAR(255) NOT NULL
+ 
+ 
+ );
