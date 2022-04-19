@@ -92,9 +92,9 @@ session_start();
 			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
 
 			EMAIL<input id="text" type="email" name="user_mail"><br><br>
-            USERNAME<input id="text" type="text" name="user_name"><br><br>
+            		USERNAME<input id="text" type="text" name="user_name"><br><br>
 			PASSWORD<input id="text" type="password" name="password"><br><br>
-			RETYPE PASSWORD<input id="text" type="password" name="confirm_password"><br><br>
+			CONFIRM PASSWORD<input id="text" type="password" name="confirm_password"><br><br>
 
 			<input id="button" type="submit" value="Signup"><br><br>
 
