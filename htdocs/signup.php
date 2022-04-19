@@ -3,7 +3,7 @@ session_start();
 
 	include("connection.php");
 	include("functions.php");
-
+    $Error = "";
 
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
@@ -16,14 +16,18 @@ session_start();
 		$sname = mysqli_query($con, "SELECT * FROM users WHERE user_name = '". $_POST['user_name']."'");
 		$smail = mysqli_query($con, "SELECT * FROM users WHERE user_mail = '". $_POST['user_mail']."'");
 	
-	
-		if(mysqli_num_rows($sname)) {
+		if(!preg_match("/^([a-zA-Z0-9\.]+@+[a-zA-Z]+(\.)+[a-zA-Z]{2,3})$/",$user_mail)) {
+			$Error = "Please enter a valid email";
+		}
+		
+		elseif(mysqli_num_rows($sname)) {
 			echo "This username already exists";
 		}
 		
 		elseif(mysqli_num_rows($smail)) {
 			echo "This email already exists";
 		}
+		
 		
 		elseif($con_pass !== $password) {
 			echo "Password and confirm Password are not the same!";
@@ -89,12 +93,18 @@ session_start();
 	<div id="box">
 		
 	<form method="post">
+			<div><?php 
+				if(isset($Error) && $Error != "")
+				{
+					echo $Error;
+				}
+			?>
+			</div>
 			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
-
-			EMAIL<input id="text" type="email" name="user_mail"><br><br>
-            		USERNAME<input id="text" type="text" name="user_name"><br><br>
-			PASSWORD<input id="text" type="password" name="password"><br><br>
-			CONFIRM PASSWORD<input id="text" type="password" name="confirm_password"><br><br>
+			<input id="text" type="email" name="user_mail" placeholder="Email"><br><br>
+            <input id="text" type="text" name="user_name" placeholder="Username"><br><br>
+			<input id="text" type="password" name="password" placeholder="Password"><br><br>
+			<input id="text" type="password" name="confirm_password" placeholder="Confirm Password"><br><br>
 
 			<input id="button" type="submit" value="Signup"><br><br>
 
