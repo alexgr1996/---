@@ -10,13 +10,26 @@ session_start();
 		//something was posted
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
+		$user_mail = $_POST['user_mail'];
 
-		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+		$sname = mysqli_query($con, "SELECT * FROM users WHERE user_name = '". $_POST['user_name']."'");
+		$smail = mysqli_query($con, "SELECT * FROM users WHERE user_mail = '". $_POST['user_mail']."'");
+	
+		if(mysqli_num_rows($sname)) {
+			echo "This username already exists";
+		}
+		
+		elseif(mysqli_num_rows($smail)) {
+			echo "This email already exists";
+		}
+
+		elseif(!empty($user_name) && !empty($password) && !empty($user_mail) && !is_numeric($user_name))
 		{
+
 
 			//save to database
 			$user_id = random_num(20);
-			$query = "insert into users(user_id,user_name,password) values('$user_id','$user_name','$password')";
+			$query = "insert into users(user_id,user_name,password,user_mail) values('$user_id','$user_name','$password','$user_mail')";
 
 			mysqli_query($con,$query);
 
@@ -69,11 +82,12 @@ session_start();
 
 	<div id="box">
 		
-		<form method="post">
+	<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
 
-			<input id="text" type="text" name="user_name"><br><br>
-			<input id="text" type="password" name="password"><br><br>
+			EMAIL<input id="text" type="email" name="user_mail"><br><br>
+            USERNAME<input id="text" type="text" name="user_name"><br><br>
+			PASSWORD<input id="text" type="password" name="password"><br><br>
 
 			<input id="button" type="submit" value="Signup"><br><br>
 
