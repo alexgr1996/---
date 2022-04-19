@@ -11,9 +11,11 @@ session_start();
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
 		$user_mail = $_POST['user_mail'];
+		$con_pass = $_POST['confirm_password'];
 
 		$sname = mysqli_query($con, "SELECT * FROM users WHERE user_name = '". $_POST['user_name']."'");
 		$smail = mysqli_query($con, "SELECT * FROM users WHERE user_mail = '". $_POST['user_mail']."'");
+	
 	
 		if(mysqli_num_rows($sname)) {
 			echo "This username already exists";
@@ -21,6 +23,10 @@ session_start();
 		
 		elseif(mysqli_num_rows($smail)) {
 			echo "This email already exists";
+		}
+		
+		elseif($con_pass !== $password) {
+			echo "Password and confirm Password are not the same!";
 		}
 
 		elseif(!empty($user_name) && !empty($password) && !empty($user_mail) && !is_numeric($user_name))
@@ -88,6 +94,7 @@ session_start();
 			EMAIL<input id="text" type="email" name="user_mail"><br><br>
             USERNAME<input id="text" type="text" name="user_name"><br><br>
 			PASSWORD<input id="text" type="password" name="password"><br><br>
+			RETYPE PASSWORD<input id="text" type="password" name="confirm_password"><br><br>
 
 			<input id="button" type="submit" value="Signup"><br><br>
 
