@@ -10,8 +10,7 @@ session_start();
 	{
 		//something was posted
 		$user_name = $_POST['user_name'];
-		$password = $_POST['password'];
-
+		$password =  $_POST['password'];
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
 
@@ -92,7 +91,7 @@ session_start();
 			<input id="text" type="password" name="password" placeholder="Password"><br><br>
 			<input id="button" type="submit" value="Login"><br><br>
 			<a href="signup.php">Click to Signup</a>
-			<a style="margin: 40px;" href="">Forgot password?</a>
+			<a style="margin: 40px;" href="forgot.php">Forgot password?</a>
 		</form>
 	</div>
 </body>

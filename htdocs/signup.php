@@ -39,6 +39,7 @@ session_start();
 
 			//save to database
 			$user_id = random_num(20);
+			//$password = password_hash($password, PASSWORD_DEFAULT); for pass hashing
 			$query = "insert into users(user_id,user_name,password,user_mail) values('$user_id','$user_name','$password','$user_mail')";
 
 			mysqli_query($con,$query);
