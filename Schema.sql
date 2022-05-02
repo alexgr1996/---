@@ -68,10 +68,3 @@ CREATE TABLE IF NOT EXISTS `assestment_questions` (
   CONSTRAINT `asse_que_que_fk` FOREIGN KEY (`ques_id`) REFERENCES `questions` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-
-
-
-
--- Data exporting was unselected.
-
--- Dumping structure for πίνακας squize.question_choices
