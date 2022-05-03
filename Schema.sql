@@ -1,8 +1,18 @@
-create table Users(
- 	UserId INT AUTO_INCREMENT PRIMARY KEY,
-	 User_Role varchar(255),
-	 username varchar(255),
-	 user_password varchar(255)
+create table users(
+ 	id BIGINT AUTO_INCREMENT PRIMARY KEY,
+	 user_id BIGINT,
+	 user_mail varchar(255),
+	 user_name varchar(255),
+	 password varchar(255),
+	 date timestamp
+);
+
+create table codes(
+	id BIGINT AUTO_INCREMENT PRIMARY KEY,
+	email varchar(100),
+	code varchar(5),
+	expire int(11)
+
 );
 
 create table Quiz_Executions(
