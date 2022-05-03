@@ -11,7 +11,8 @@ create table codes(
 	id BIGINT AUTO_INCREMENT PRIMARY KEY,
 	email varchar(100),
 	code varchar(5),
-	expire int(11)
+	expire int(11),
+	FOREIGN KEY (email) REFERENCES users(user_mail)
 
 );
 
