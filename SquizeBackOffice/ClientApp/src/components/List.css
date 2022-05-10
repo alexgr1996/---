@@ -1,0 +1,47 @@
+﻿
+.datatable-squize .table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 960px) {
+    .datatable-squize .table-header {
+        align-items: flex-start;
+    }
+}
+
+.datatable-squize .product-image {
+    width: 100px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.datatable-squize .p-dialog .product-image {
+    width: 150px;
+    margin: 0 auto 2rem auto;
+    display: block;
+}
+
+.datatable-squize .confirmation-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 960px) {
+    .datatable-squize .p-toolbar {
+        flex-wrap: wrap;
+    }
+
+        .datatable-squize .p-toolbar .p-button {
+            margin-bottom: 0.25rem;
+        }
+
+    .datatable-squize .table-header {
+        flex-direction: column;
+    }
+
+        .datatable-squize .table-header .p-input-icon-left, .datatable-squize .table-header input {
+            width: 100%;
+        }
+}
