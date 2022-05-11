@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <script type="text/javascript" src="/js/javascript.js">
+
+  </script>
+  <title>Login</title>
 </head>
 <body>
+
+
 
   <div class="row">
     <div class="col-md-6 offset-md-3">
@@ -18,29 +23,30 @@
 
   <div class="row center">
     <div class="col-md-6 offset-md-3">
-      <form class="" action="index.html" method="post">
+      <form class="" action="main.html" method="post">
         <input type="text" id="name" name="name" placeholder="USERNAME..."><br>
         <input type="text" id="password" name="password" placeholder="PASSWORD..."><br>
         <input type="text" id="email" name="email" placeholder="E-MAIL...">
       </form>
       <br>
-      <a href="/website/main.html">
-        <button type="submit" name="logInButton" class="btn btn-success">
-          LOGIN
+      <a href="main.html">
+        <button type="submit" name="logInButton" class="btn btn-myButton" onclick="handleSubmit()">
+          <b>LOGIN</b>
         </button>
       </a>
       <br><br>
 
-      <a href="/website/signUp.html">
-        <button type="button" name="logInButton" class="btn btn-primary">
-          SIGN UP
+      <a href="signUp.html">
+        <button type="button" name="logInButton" class="btn btn-myButton">
+          <b>SIGN UP</b>
         </button>
         <br><br>
+      </a>
 
-        <a href="">
-          <button type="button" name="forgotPasswordButton" class="btn btn-danger">
-            FORGOT MY PASSWORD
-          </button>
+      <a href="forgotPassword.html">
+        <button type="button" name="forgotPasswordButton" class="btn btn-myButton">
+          <b>FORGOT MY PASSWORD</b>
+        </button>
       </a>
     </div>
   </div>
