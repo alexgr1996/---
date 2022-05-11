@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -41,12 +41,7 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
+
 
 
 
@@ -54,6 +49,8 @@ html {
 
 
 /* my css */
+
+
 
 div.relative {
   position: relative;
@@ -65,6 +62,13 @@ div.absolute {
   right: 0;
   width:
   height: 100px;
+}
+
+div.absolute-menu {
+  position: absolute;
+  top: 60px;
+  left: 300px;
+  height: 200px;
 }
 
 .logOutButton {
@@ -81,6 +85,11 @@ margin-right: 500px;
 padding: 40px;
 }
 
+.my-block {
+
+}
+
+
 .submit {
   color: black;
   text-align: center;
@@ -90,6 +99,8 @@ padding: 40px;
   padding: 5px 10px;
   cursor: pointer;
 }
+
+
 
 /* my css */
 
@@ -110,8 +121,10 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
+
+
 body {
-  margin: 0;
+  /* margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
@@ -119,7 +132,16 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  */
+  font-family: Helvetica, sans-serif;
+  background: #FCFFE7;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+
 
 [tabindex="-1"]:focus {
   outline: 0 !important;
@@ -2549,6 +2571,12 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
+}
+
+.btn-myButton {
+  color: #fff;
+  background-color: #CE9461;
+  border-color: #CE9461;
 }
 
 .btn-success:hover {
@@ -10094,3 +10122,14 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+body {
+  background-color: #FFFDA2;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
