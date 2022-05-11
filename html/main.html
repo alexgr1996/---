@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <script type="text/javascript" src="/js/javascript.js">
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  <title>Main</title>
+</head>
+<body>
+
+  <div class="relative">
+    <h2>
+      User: <span id="result-name" />
+    </h2>
+
+    <div class="absolute">
+      <a href="login.html">
+        <button type="button" name="logOutButton" class="logOutButton">
+          Log out
+        </button>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="dropdown relative">
+	  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+		Περιεχόμενα
+	  </button>
+	  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+		<li><a class="dropdown-item" href="#">Γεωγραφία</a></li>
+		<li><a class="dropdown-item" href="#">Τεχνολογία</a></li>
+		<li><a class="dropdown-item" href="#">Ιστορία</a></li>
+    <li><a class="dropdown-item" href="#">Φαγητό</a></li>
+	  </ul>
+	</div>
+
+  <div class="btn-group-vertical absolute-menu" role="group" aria-label="Basic example">
+    <h3 style="margin-right:20px;">Δυσκολία:</h3>
+    <button type="button" class="btn btn-primary">Easy</button>
+    <button type="button" class="btn btn-primary">Medium</button>
+    <button type="button" class="btn btn-primary">Hard</button>
+  </div>
+
+  <a href="quiz.html">
+    <button style="padding:50px; margin-top:200px; margin-left:277px; font-size:30px;" type="button">
+      <b>Take Quiz</b>
+    </button>
+    <br><br>
+  </a>
+
+</body>
+</html>
