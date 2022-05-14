@@ -12,6 +12,10 @@
   padding: 0;
 }*/
 
+.logOutButton {
+  width: 100px;
+}
+
 li, a, button {
   font-family: "Josefin", Sans;
   font-weight: 500;
@@ -121,156 +125,141 @@ div.relative {
     cursor: pointer;
   }
   
-  
-  
   /* Telos-Nikos */
   
   
-  /* geo test mpas kai */
   
   
   
-  /*  g  */
+  /*  g   */
+
+
   
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  #header {
-    width: 100%;
-    height:100px;
-    background:#F4FD88;
-    color:black;
-    border: solid 2px #000;
-  }
-  
-  
-  /*  bg-color : #CE9461, #E0D8B0, #AC7D88 
-                (ετσι και ετσι: #85586F), #DEB6AB, F8ECD1(σχεδον ασπρο..)
-                #417D7A, #68A7AD, A0937D, #85C88A
-                #CA965C, #87644 ,96CEB4 , A3DA8D, 9D5353
-                BF8B67, #876445 , BABD42, DAE5D0, A0BCC2
-                82954B , 5F7161, 781C68(δυσκολα) 
-  */
- /* *{
-      margin:0;
-      padding:0;
-      transition: all 0.35s linear;
-      font-family:sans-serif;
-      box-sizing: border-box;
-      
-  
-  }*/
-  
-  section{
-      display:flex;
-      align-items:center;
-      justify-content: center;
-      height: 50vh; /* Mεγεθος κουτιου κεντρικου */
-      flex-direction: row;
-  }
-  
-  .neon{
-      padding: 1rem 2rem;
-      margin: 1rem 0.5rem;
-      border-width: 1px;
-      border-style: solid;
-      border-color: #CE9461 #E5CB9F #E5CB9F brown; /* outline neon-button (περίγραμμα) */
-  
-      border-radius: 3rem;
-      font-size: 0.80rem;
-      font-weight: bold; 
-      cursor:pointer;
-      background-color:transparent;
-      background-image: linear-gradient(to bottom right, #CE9461, #E5CB9F  );
-      background-clip:text;
-      box-shadow: -2px -2px 0.5rem #CE9461,       
-                   2px 2px 0.5rem inset #CE9461,
-                   2px 2px 0.5rem #E5CB9F,
-                   2px 2px 0.5rem inset #E5CB9F; /* σκούρο-σκούρο, ανοιχτό-ανοιχτό */
-  
-  }
-  
-  .neon:hover{
-      color:black;
-      background-clip:border-box;
-      box-shadow: -0.5rem -0.25rem 2rem #CE9461;
-  
-  }
-  
-  
-  
-  /* RADIUS BUTTON NO..
-  button{
-    font-size: 1rem;
-    padding:.5rem 2rem;
+
+/* logo color: #F4FD88 */
+
+
+
+/*  bg-color : #CE9461, #E0D8B0, #AC7D88 
+              (ετσι και ετσι: #85586F), #DEB6AB, F8ECD1(σχεδον ασπρο..)
+              #417D7A, #68A7AD, A0937D, #85C88A
+              #CA965C, #87644 ,96CEB4 , A3DA8D, 9D5353
+              BF8B67, #876445 , BABD42, DAE5D0, A0BCC2
+              82954B , 5F7161, 781C68(δυσκολα) 
+
+/////////
+*{
+    margin:0;
+    padding:0;
+    transition: all 0.35s linear;
+    font-family:sans-serif;
+    box-sizing: border-box;
+    background-color: #876445 ;
+}
+*/
+
+section{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height: 50vh; /* Mεγεθος κουτιου κεντρικου */
+    flex-direction: row;
+}
+
+.neon{
+    padding: 1rem 2rem;
+    margin: 1rem 0.5rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CE9461 #E5CB9F #E5CB9F brown; /* outline neon-button (περίγραμμα) */
+
+    border-radius: 3rem;
+    font-size: 0.80rem;
+    font-weight: bold; 
     cursor:pointer;
-    position:relative;
-    background-color:black;
-    border-radius: 5px;
-    color:white;
-    overflow:hidden;
-  }
-  
-  button span{
-    position:relative;
-    z-index: 2;
-  }
-  
-  button::before{
-    content: '';
-    position: absolute;
-    inset: -.5rem;
-    background-image: linear-gradient(to right, blue, red);
-    animation: rotate 300ms linear infinite;
-    animation-play-state:paused;
-  }
-  
-  button:hover::before{
-    animation-play-state:running;
-  }
-  
-  button:active{
-    trnasform:scale(.95);
-  }
-  
-  
-  @keyframes rotate
-  
-    from { transform: rotate(0); }
-    to { transform: rotate(360deg); }
-  
-  button::after {
-    content: '';
-    position: absolute;
-    inset: 2rem;
-    background-color: black;
-    border-radius:5px;
-  }
-  */
-  
-  
-  
-  /*
-  #logo{
-    float: left;
-    width: 100px;
-    height: 100px;
-    margin-top:10px;
-    margin-left:10px;
-    background-color:#F4FD88;
-  }
-  */
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    background-color:transparent;
+    background-image: linear-gradient(to bottom right, #CE9461, #E5CB9F  );
+    background-clip:text;
+    box-shadow: -2px -2px 0.5rem #CE9461,       
+                 2px 2px 0.5rem inset #CE9461,
+                 2px 2px 0.5rem #E5CB9F,
+                 2px 2px 0.5rem inset #E5CB9F; /* σκούρο-σκούρο, ανοιχτό-ανοιχτό */
+
+}
+
+.neon:hover{
+    color:black;
+    background-clip:border-box;
+    box-shadow: -0.5rem -0.25rem 2rem #CE9461;
+
+}
+
+
+
+/* RADIUS BUTTON NO..
+button{
+  font-size: 1rem;
+  padding:.5rem 2rem;
+  cursor:pointer;
+  position:relative;
+  background-color:black;
+  border-radius: 5px;
+  color:white;
+  overflow:hidden;
+}
+
+button span{
+  position:relative;
+  z-index: 2;
+}
+
+button::before{
+  content: '';
+  position: absolute;
+  inset: -.5rem;
+  background-image: linear-gradient(to right, blue, red);
+  animation: rotate 300ms linear infinite;
+  animation-play-state:paused;
+}
+
+button:hover::before{
+  animation-play-state:running;
+}
+
+button:active{
+  trnasform:scale(.95);
+}
+
+
+@keyframes rotate
+
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+
+button::after {
+  content: '';
+  position: absolute;
+  inset: 2rem;
+  background-color: black;
+  border-radius:5px;
+}
+*/
+
+/*
+#logo{
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-top:10px;
+  margin-left:10px;
+  background-color:#F4FD88;
+}
+*/
+
+
+
+
+
   
   article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;

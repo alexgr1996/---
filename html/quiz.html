@@ -10,8 +10,6 @@
 			$question = $_POST['question_text'];
       $answer = $_POST['text'];
 		}
-
-  
 ?>
 
 <!DOCTYPE html>
@@ -20,17 +18,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
-  <link rel="stylesheet" href="../css/quiz.css">
-=======
-  <link rel="stylesheet" href="/css/quiz.css">
-  <link rel="stylesheet" href="/css/test.css">
->>>>>>> e8d80affe936ae7fa37f924bf50807d8c3059706
-  <script defer src="/js/quiz.js"></script>
+
+  <link rel="stylesheet" href="../css/quiz.css"> 
+  <link rel="stylesheet" href="../css/our.css">
+  <link rel="stylesheet" href="../css/info.css"> 
+  <link rel="stylesheet" href="../css/test.css">
+ 
+  
+  <script defer src="../js/quiz.js"></script>
 
   <title>Squiz</title>
 </head>
 <body>
+
+  <header>
+    <img class="logo circular--square" src="lg.jpg" alt="logo">
+    <nav>
+      <ul class="nav_links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profil</a></li>
+      </ul>
+    </nav>
+    <a class="logoutButton" href="login.html"><button>Logout</button></a>
+  </header>
 
   <div class="container body-quiz">
     <div id="question-container" class="hide">

@@ -37,14 +37,7 @@
 
 
 
-
-
-
-
-
 /* Nikos */
-
-<<<<<<< HEAD
 div.absolute {
   position: absolute;
   top: 0;
@@ -59,11 +52,6 @@ div.absolute-menu {
   left: 300px;
   height: 200px;
 }
-
-.logOutButton {
-  width: 100px;
-}
-
 
 h2 {text-align: center;}
 
@@ -89,8 +77,6 @@ padding: 40px;
   cursor: pointer;
 }
 
-
-
 /* my css */
 
 
@@ -106,10 +92,12 @@ img {
   max-height: 100%;
 }
 
+
+
 #header {
   width: 100%;
   height:100px;
-  background:#F4FD88;
+ /* background:#F4FD88; */
   color:black;
   border: solid 2px #000;
 }
@@ -122,14 +110,14 @@ img {
               BF8B67, #876445 , BABD42, DAE5D0, A0BCC2
               82954B , 5F7161, 781C68(δυσκολα) 
 */
+
 *{
     margin:0;
     padding:0;
     transition: all 0.35s linear;
     font-family:sans-serif;
     box-sizing: border-box;
-    background-color: #876445 ;
-
+    background-color: #876445 ; 
 }
 
 section{
@@ -169,68 +157,6 @@ section{
 }
 
 
-
-/* RADIUS BUTTON NO..
-button{
-  font-size: 1rem;
-  padding:.5rem 2rem;
-  cursor:pointer;
-  position:relative;
-  background-color:black;
-  border-radius: 5px;
-  color:white;
-  overflow:hidden;
-}
-
-button span{
-  position:relative;
-  z-index: 2;
-}
-
-button::before{
-  content: '';
-  position: absolute;
-  inset: -.5rem;
-  background-image: linear-gradient(to right, blue, red);
-  animation: rotate 300ms linear infinite;
-  animation-play-state:paused;
-}
-
-button:hover::before{
-  animation-play-state:running;
-}
-
-button:active{
-  trnasform:scale(.95);
-}
-
-
-@keyframes rotate
-
-  from { transform: rotate(0); }
-  to { transform: rotate(360deg); }
-
-button::after {
-  content: '';
-  position: absolute;
-  inset: 2rem;
-  background-color: black;
-  border-radius:5px;
-}
-*/
-
-
-
-/*
-#logo{
-  float: left;
-  width: 100px;
-  height: 100px;
-  margin-top:10px;
-  margin-left:10px;
-  background-color:#F4FD88;
-}
-*/
 
 
 
@@ -343,10 +269,7 @@ a {
   background-color: transparent;
 }
 
-a:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
+
 
 a:not([href]):not([tabindex]) {
   color: inherit;
