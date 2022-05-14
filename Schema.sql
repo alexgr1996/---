@@ -9,10 +9,10 @@ create table users(
 
 create table codes(
 	id BIGINT AUTO_INCREMENT PRIMARY KEY,
-	email varchar(100),
+	email varchar(100) FOREIGN KEY REFERENCES users(user_mail),
 	code varchar(5),
-	expire int(11),
-	CONSTRAINT `fk_email` FOREIGN KEY (`email`) REFERENCES `users` (`user_mail`) ON DELETE NO ACTION ON UPDATE NO ACTION
+	expire int(11)
+	
 );
 
 create table Quiz_Executions(
