@@ -6,14 +6,15 @@ create table users(
 	 password varchar(255),
 	 date timestamp
 );
-
-create table codes(
-	id BIGINT AUTO_INCREMENT PRIMARY KEY,
-	email varchar(100),
-	code varchar(5),
-	expire int(11),
-	FOREIGN KEY (email) REFERENCES users(user_mail)
-
+CREATE TABLE codes (
+    id int NOT NULL AUTO_INCREMENT,
+    email varchar(100),
+    code varchar(5),
+    expire int(11),
+    PRIMARY KEY (id),
+    KEY FK_mail (email),
+    CONSTRAINT FK_mail FOREIGN KEY (email)
+    REFERENCES users(user_mail)
 );
 
 create table Quiz_Executions(

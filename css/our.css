@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+/*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(#box) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}*/
+
+li, a, button {
+  font-family: "Josefin", Sans;
+  font-weight: 500;
+  font-size: 16;
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  
+}
+
+.logo {
+    cursor: pointer;
+    max-width: 10%;
+    height: auto;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #0088a9;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {  
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+
+
+
+div.relative {
+    position: relative;
+  }
+  
+  div.absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100px;
+  }
+  
+  div.absolute-menu {
+    position: absolute;
+    top: 60px;
+    left: 300px;
+    height: 200px;
+  }
+  
+  .logOutButton {
+    width: 100px;
+  }
+  
+  
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+  
+  .center {
+  text-align: center;
+  margin-left: 500px;
+  margin-right: 500px;
+  padding: 40px;
+  }
+  
+  .my-block {
+  
+  }
+  
+  
+  .submit {
+    color: black;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    margin: 20px 0px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  
+  
+  /* Telos-Nikos */
+  
+  
+  /* geo test mpas kai */
+  
+  
+  
+  /*  g  */
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  #header {
+    width: 100%;
+    height:100px;
+    background:#F4FD88;
+    color:black;
+    border: solid 2px #000;
+  }
+  
+  
+  /*  bg-color : #CE9461, #E0D8B0, #AC7D88 
+                (ετσι και ετσι: #85586F), #DEB6AB, F8ECD1(σχεδον ασπρο..)
+                #417D7A, #68A7AD, A0937D, #85C88A
+                #CA965C, #87644 ,96CEB4 , A3DA8D, 9D5353
+                BF8B67, #876445 , BABD42, DAE5D0, A0BCC2
+                82954B , 5F7161, 781C68(δυσκολα) 
+  */
+ /* *{
+      margin:0;
+      padding:0;
+      transition: all 0.35s linear;
+      font-family:sans-serif;
+      box-sizing: border-box;
+      
+  
+  }*/
+  
+  section{
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      height: 50vh; /* Mεγεθος κουτιου κεντρικου */
+      flex-direction: row;
+  }
+  
+  .neon{
+      padding: 1rem 2rem;
+      margin: 1rem 0.5rem;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #CE9461 #E5CB9F #E5CB9F brown; /* outline neon-button (περίγραμμα) */
+  
+      border-radius: 3rem;
+      font-size: 0.80rem;
+      font-weight: bold; 
+      cursor:pointer;
+      background-color:transparent;
+      background-image: linear-gradient(to bottom right, #CE9461, #E5CB9F  );
+      background-clip:text;
+      box-shadow: -2px -2px 0.5rem #CE9461,       
+                   2px 2px 0.5rem inset #CE9461,
+                   2px 2px 0.5rem #E5CB9F,
+                   2px 2px 0.5rem inset #E5CB9F; /* σκούρο-σκούρο, ανοιχτό-ανοιχτό */
+  
+  }
+  
+  .neon:hover{
+      color:black;
+      background-clip:border-box;
+      box-shadow: -0.5rem -0.25rem 2rem #CE9461;
+  
+  }
+  
+  
+  
+  /* RADIUS BUTTON NO..
+  button{
+    font-size: 1rem;
+    padding:.5rem 2rem;
+    cursor:pointer;
+    position:relative;
+    background-color:black;
+    border-radius: 5px;
+    color:white;
+    overflow:hidden;
+  }
+  
+  button span{
+    position:relative;
+    z-index: 2;
+  }
+  
+  button::before{
+    content: '';
+    position: absolute;
+    inset: -.5rem;
+    background-image: linear-gradient(to right, blue, red);
+    animation: rotate 300ms linear infinite;
+    animation-play-state:paused;
+  }
+  
+  button:hover::before{
+    animation-play-state:running;
+  }
+  
+  button:active{
+    trnasform:scale(.95);
+  }
+  
+  
+  @keyframes rotate
+  
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+  
+  button::after {
+    content: '';
+    position: absolute;
+    inset: 2rem;
+    background-color: black;
+    border-radius:5px;
+  }
+  */
+  
+  
+  
+  /*
+  #logo{
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-top:10px;
+    margin-left:10px;
+    background-color:#F4FD88;
+  }
+  */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+  }
+  
+  
+  
+  body {
+    /* margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    */
+    font-family: Helvetica, sans-serif;
+    background: #FCFFE7;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #87644574;
+  }
+  

@@ -1,18 +1,40 @@
+<?php 
+  session_start();
+
+  include("connection.php");
+  include("functions.php");
+
+  if($_SERVER['REQUEST_METHOD'] == "POST")
+		{
+			//something was posted
+			$question = $_POST['question_text'];
+      $answer = $_POST['text'];
+		}
+
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<<<<<<< HEAD
   <link rel="stylesheet" href="../css/quiz.css">
+=======
+  <link rel="stylesheet" href="/css/quiz.css">
+  <link rel="stylesheet" href="/css/test.css">
+>>>>>>> e8d80affe936ae7fa37f924bf50807d8c3059706
   <script defer src="/js/quiz.js"></script>
+
   <title>Squiz</title>
 </head>
 <body>
 
   <div class="container body-quiz">
     <div id="question-container" class="hide">
-      <div id="question" class="question-container">Question</div>
+      <div id="question" class="question-container"><?php echo  ?></div>
       <div id="answer-buttons" class="btn-grid">
         <button class="btn">Answer1</button>
         <button class="btn">Answer2</button>
