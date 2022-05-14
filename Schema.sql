@@ -12,8 +12,7 @@ create table codes(
 	email varchar(100),
 	code varchar(5),
 	expire int(11),
-	FOREIGN KEY (email) REFERENCES users(user_mail)
-
+	CONSTRAINT `fk_email` FOREIGN KEY (`email`) REFERENCES `users` (`user_mail`) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
 create table Quiz_Executions(
