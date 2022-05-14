@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
 
-*,
+/*,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-* {
+*:not(#box) {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+}*/
 
 li, a, button {
   font-family: "Josefin", Sans;
@@ -147,7 +147,7 @@ div.relative {
                 BF8B67, #876445 , BABD42, DAE5D0, A0BCC2
                 82954B , 5F7161, 781C68(δυσκολα) 
   */
-  *{
+ /* *{
       margin:0;
       padding:0;
       transition: all 0.35s linear;
@@ -155,7 +155,7 @@ div.relative {
       box-sizing: border-box;
       
   
-  }
+  }*/
   
   section{
       display:flex;
