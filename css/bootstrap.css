@@ -44,9 +44,18 @@
 
 /* Nikos */
 
+.WebContainer{
+  width: 100%;
+  height: 100px;
+}
 
+#box{
 
-
+  background-color: rgba(251, 159, 159, 0.755);
+  margin: auto;
+  width: 300px;
+  padding: 20px;
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important;
