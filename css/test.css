@@ -32,7 +32,7 @@ button {
 
 .container {
   width: 800px;
-  max-width: 80%;
+  max-width: 20%;
   background-color: rgb(179, 189, 254);
   border-radius: 10px;
   margin-top: 20px;
@@ -136,7 +136,7 @@ button:hover {
 }
 
 .center-diskolia {
-  margin-left: auto;
+  margin-left: 20px;
   width: fit-content;
   padding-right: 70px;
   margin-top: 0px;
