@@ -33,7 +33,7 @@ button {
 .container {
   width: 800px;
   max-width: 80%;
-  background-color: white;
+  background-color: rgba(150, 96, 10, 0.479);
   border-radius: 10px;
   margin-top: 20px;
   padding: 10px;
@@ -127,4 +127,21 @@ button:hover {
   justify-content: center;
   align-items: center;
   height: 200px;
+}
+
+.center-periexomena {
+  margin-left: auto;
+  width: fit-content;
+  padding-right: 70px;
+}
+
+.center-diskolia {
+  margin-left: auto;
+  width: fit-content;
+  padding-right: 70px;
+  margin-top: 0px;
+}
+
+#diskolia {
+  color: aqua;
 }

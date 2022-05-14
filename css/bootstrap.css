@@ -57,6 +57,8 @@
   padding: 20px;
 }
 
+/* end - Nikos */
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
