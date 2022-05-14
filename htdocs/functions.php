@@ -112,3 +112,7 @@ function random_num($length)
 
 		return "the code is incorrect";
 	}
+
+	function getQuestion($con) {
+		
+	}

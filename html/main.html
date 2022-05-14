@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/our.css"> 
   <script type="text/javascript" src="/js/javascript.js">
 
   </script>
@@ -15,31 +16,18 @@
 <body>
 
   <header>
-    <img src="lg.jpg" alt="logo">
+    <img class="logo" src="lg.jpg" alt="logo">
     <nav>
       <ul class="nav_links">
         <li><a href="#">Home</a></li>
         <li><a href="#">Profil</a></li>
       </ul>
     </nav>
+    <a class="logoutButton" href="login.html"><button>Logout</button></a>
   </header>
 
-  <div class="relative">
-    <h2>
-      User: <span id="result-name" />
-    </h2>
 
-    <div class="absolute">
-      <a href="login.html">
-        <button type="button" name="logOutButton" class="logOutButton">
-          Log out
-        </button>
-      </a>
-    </div>
-  </div>
-
-
-  <div class="dropdown relative">
+  <div class="dropdown">
 	  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 		Περιεχόμενα
 	  </button>
