@@ -29,7 +29,7 @@ session_start();
 					{
 
 						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: nikosTest.php");
+						header("Location: index.php");
 						die;
 					}
 				}
@@ -75,12 +75,12 @@ session_start();
   <div class="row center">
     <div class="col-md-6 offset-md-3">
       <form method="post" class="" action="main.html" method="post">
-        <input type="text" id="name" name="name" placeholder="USERNAME..."><br>
+        <input type="text" id="user_name" name="user_name" placeholder="USERNAME..."><br>
         <input type="text" id="password" name="password" placeholder="PASSWORD..."><br>
 
         <input id="button" type="submit" value="Login"><br><br>
         
-        <a href="nikosTest.php">
+        <a href="index.php">
         <button type="submit" name="logInButton" class="btn btn-myButton" onclick="handleSubmit()">
           <b>LOGIN</b>
         </button>
