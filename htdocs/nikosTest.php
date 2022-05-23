@@ -7,7 +7,8 @@ session_start();
 	$ChosenCategory = $_POST['Category_Descriptions'];
     $ChosenDifficulty = $_POST['Difficulty'];
     
-
+    getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
+    sentQuestions($con,$TwriniErwtitisi,$SelectedQuestions,);
 ?>
 
 
@@ -87,9 +88,9 @@ session_start();
                 <div>
                     <label for="colors">Δυσκολία:</label>
                     <select name="colors[]" id="colors">
-                        <option value="red">Εύκολο</option>
-                        <option value="green">Μέτριο</option>
-                        <option value="blue">Δύσκολο</option>
+                        <option value="1">Εύκολο</option>
+                        <option value="2">Μέτριο</option>
+                        <option value="3">Δύσκολο</option>
                     </select>
                 </div>
                 <div>

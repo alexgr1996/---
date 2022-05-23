@@ -113,37 +113,54 @@ function random_num($length)
 		return "the code is incorrect";
 	}
 
-<<<<<<< HEAD
 
 
 
 
 
 	function getQuestion($con,$ChosenDifficulty,$ChosenCategory) {
-		$query="select id,question_text  from questions Q JOIN  categories C ON Q.category_id=C.id  Where difficulty =  '$ChosenDifficulty' AND C.category_id ='$ChosenCategory'  " ;
+		$query="select id  from questions Q JOIN  categories C ON Q.category_id=C.id  Where difficulty =  '$ChosenDifficulty' AND C.category_id ='$ChosenCategory'  " ;
 		 $QuestionResult= mysqli_query($con,$query);
-		 $row = mysqli_num_rows($QuestionResult);
+		 $numofrow = mysqli_num_rows($QuestionResult);
 		 $SelectedQuestions = array(10);
 		 
-		 for($i=0;$i<=$row;$i++){
-			$chosenQID = rand(1,$row);
-				if($QuestionResult[$i] ==$chosenQID)
-				$chosenQID = rand(1,$row);
+		  $chosenRAND = rand(1,$numofrow);
+		  $i=1;
+		  $QuestionResult[$chosenRAND]==$SelectedQuestions[1];
+		  do{
+			
+				if($QuestionResult[$chosenRAND] ==$SelectedQuestions[$i])
+				$chosenRAND = rand(1,$numofrow);
 				else
-				$SelectedQuestions[$i] ==$chosenQID;
+				$SelectedQuestions[$i] = $QuestionResult[$chosenRAND];
+				$i++;
+			
+		  }
+		  while( $i=10 );
+	
+		  return $SelectedQuestions;
+		}
 
-		 }
-		 
+
+
+
+
+
+	function sentQuestions($con,$index,$SelectedQuestions){
+
+	     $query= "select question_text  from  questions WHERE id= $index"//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
+		 $result = mysqli_query($con, $query);
 
 	}
 
-=======
-	function getQuestion($con) {
-		
-	}
+	function ReturnMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer){
+		$query = "insert into quiz_executons(QuestionText,CorrectAnswer,WrongAns,WrongAns2,WrongAns3,Difficutly,Category,user_id,QuizID,UserAnswer) values('$QuestionText','$CorrectAnswer','$WrongAns','$WrongAns2','$WrongAns3','$Difficutly','$Category','$quiz_user_id','$QuizID','$UserAnswer')";
+		mysqli_query($con,$query);
+		}
+
+
 
 	function startTest() {
 		header("location: nikosTest.php");
 	}
 	
->>>>>>> dda8efb343ee3ba59301ea363bb119b8c2bec54b

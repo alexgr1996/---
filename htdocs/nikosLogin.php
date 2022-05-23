@@ -80,12 +80,7 @@ session_start();
 
         <input id="button" type="submit" value="Login"><br><br>
         
-<<<<<<< HEAD
-        <a href="index.php">
-        <button type="submit" name="logInButton" class="btn btn-myButton" >
-=======
         <button type="submit" name="logInButton" class="btn btn-myButton">
->>>>>>> dda8efb343ee3ba59301ea363bb119b8c2bec54b
           <b>LOGIN</b>
         </button>
         <br><br>
