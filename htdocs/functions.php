@@ -113,6 +113,26 @@ function random_num($length)
 		return "the code is incorrect";
 	}
 
-	function getQuestion($con) {
-		
+
+
+
+
+
+	function getQuestion($con,$ChosenDifficulty,$ChosenCategory) {
+		$query="select id,question_text  from questions Q JOIN  categories C ON Q.category_id=C.id  Where difficulty =  '$ChosenDifficulty' AND C.category_id ='$ChosenCategory'  " ;
+		 $QuestionResult= mysqli_query($con,$query);
+		 $row = mysqli_num_rows($QuestionResult);
+		 $SelectedQuestions = array(10);
+		 
+		 for($i=0;$i<=$row;$i++){
+			$chosenQID = rand(1,$row);
+				if($QuestionResult[$i] ==$chosenQID)
+				$chosenQID = rand(1,$row);
+				else
+				$SelectedQuestions[$i] ==$chosenQID;
+
+		 }
+		 
+
 	}
+

@@ -4,7 +4,9 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
-	$user_data = check_login($con);
+	$ChosenCategory = $_POST['Category_Descriptions'];
+    $ChosenDifficulty = $_POST['Difficulty'];
+    
 
 ?>
 
@@ -47,10 +49,10 @@ session_start();
                     Περιεχόμενα
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Γεωγραφία</a></li>
-                    <li><a class="dropdown-item" href="#">Τεχνολογία</a></li>
-                    <li><a class="dropdown-item" href="#">Ιστορία</a></li>
-                    <li><a class="dropdown-item" href="#">Φαγητό</a></li>
+                    <li><a class="dropdown-item" name="Category_Descriptions" href="#">Γεωγραφία</a></li>
+                    <li><a class="dropdown-item" name="Category_Descriptions" href="#">Τεχνολογία</a></li>
+                    <li><a class="dropdown-item" name="Category_Descriptions" href="#">Ιστορία</a></li>
+                    <li><a class="dropdown-item" name="Category_Descriptions" href="#">Τέχνη</a></li>
                 </ul>
             </div>
 

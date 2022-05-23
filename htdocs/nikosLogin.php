@@ -81,7 +81,7 @@ session_start();
         <input id="button" type="submit" value="Login"><br><br>
         
         <a href="index.php">
-        <button type="submit" name="logInButton" class="btn btn-myButton" onclick="handleSubmit()">
+        <button type="submit" name="logInButton" class="btn btn-myButton" >
           <b>LOGIN</b>
         </button>
         </a>
