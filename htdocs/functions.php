@@ -113,6 +113,7 @@ function random_num($length)
 		return "the code is incorrect";
 	}
 
+<<<<<<< HEAD
 
 
 
@@ -136,3 +137,13 @@ function random_num($length)
 
 	}
 
+=======
+	function getQuestion($con) {
+		
+	}
+
+	function startTest() {
+		header("location: nikosTest.php");
+	}
+	
+>>>>>>> dda8efb343ee3ba59301ea363bb119b8c2bec54b
