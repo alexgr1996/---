@@ -148,7 +148,7 @@ function random_num($length)
 
 	function sentQuestions($con,$index,$SelectedQuestions){
 
-	     $query= "select question_text  from  questions WHERE id= $index"//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
+	     $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
 		 $result = mysqli_query($con, $query);
 
 	}
