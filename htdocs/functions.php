@@ -116,3 +116,8 @@ function random_num($length)
 	function getQuestion($con) {
 		
 	}
+
+	function startTest() {
+		header("location: nikosTest.php");
+	}
+	
