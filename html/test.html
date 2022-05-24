@@ -1,3 +1,28 @@
+<?php 
+
+
+
+
+
+
+
+
+
+
+
+
+  if($_SERVER['REQUEST_METHOD'] == "POST")
+		{
+			//something was posted
+			$username = $_POST['question_text'];
+            $answer = $_POST['text'];
+		}
+
+    $user_data = check_login($con);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +32,7 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/test.css">
     <script type="text/javascript" src="/js/javascript.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
      
     <title>Document</title>

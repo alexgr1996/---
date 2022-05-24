@@ -1,3 +1,16 @@
+<?php 
+  
+
+  
+
+  if(!$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname))
+  {
+
+    die("failed to connect!");
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +46,6 @@
       <form class="" action="main.html" method="post">
         <input type="text" id="name" name="name" placeholder="USERNAME..."><br>
         <input type="text" id="password" name="password" placeholder="PASSWORD..."><br>
-        <input type="text" id="email" name="email" placeholder="E-MAIL...">
       </form>
       <br>
       <a href="test.html">
