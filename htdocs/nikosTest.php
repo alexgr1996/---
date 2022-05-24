@@ -18,10 +18,8 @@ session_start();
 
    }
 
-   function StoreMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer){
-    $query = "insert into executed_quizzes(QuestionText,CorrectAnswer,WrongAns,WrongAns2,WrongAns3,Difficutly,Category,user_id,QuizID,UserAnswer) values('$QuestionText','$CorrectAnswer','$WrongAns','$WrongAns2','$WrongAns3','$Difficutly','$Category','$quiz_user_id','$QuizID','$UserAnswer')";
-    mysqli_query($con,$query);
-    }
+    StoreMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer);
+    
     
 ?>
 
@@ -77,10 +75,10 @@ session_start();
                 <div>
                     <label for="colors">Περιεχόμενα:</label>
                     <select name="colors[]" id="colors">
-                        <option value="red">Γεωγραφία</option>
-                        <option value="green">Τεχνολογία</option>
-                        <option value="blue">Ιστορία</option>
-                        <option value="purple">Φαγητό</option>
+                        <option value="1">Γεωγραφία</option>
+                        <option value="2">Τεχνολογία</option>
+                        <option value="3">Ιστορία</option>
+                        <option value="4">Τέχνη</option>
                     </select>
                 </div>
                 <div>
