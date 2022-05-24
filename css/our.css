@@ -12,10 +12,6 @@
   padding: 0;
 }*/
 
-.logOutButton {
-  width: 100px;
-}
-
 li, a, button {
   font-family: "Josefin", Sans;
   font-weight: 500;
@@ -65,14 +61,15 @@ button {
   transition: all 0.3s ease 0s;
 }
 
+/*
 button:hover {  
   background-color: rgba(0, 136, 169, 0.8);
 }
+*/
 
 
 
-
-div.relative {
+  div.relative {
     position: relative;
   }
   
@@ -110,10 +107,11 @@ div.relative {
   padding: 40px;
   }
   
+  /*
   .my-block {
   
   }
-  
+  */
   
   .submit {
     color: black;
@@ -133,11 +131,7 @@ div.relative {
   
   /*  g   */
 
-
-  
-
 /* logo color: #F4FD88 */
-
 
 
 /*  bg-color : #CE9461, #E0D8B0, #AC7D88 
