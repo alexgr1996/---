@@ -3,22 +3,22 @@ session_start();
 
 	include("connection.php");
 	include("functions.php");
-
-	$ChosenCategory = $_POST['Category_Descriptions'];
-    $ChosenDifficulty = $_POST['Difficulty'];
-    
-    getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
-    $index=0;
-    function sentQuestions(/*$con,*/$index,$QuestionResult){
+    if($_SERVER['REQUEST_METHOD'] == "POST") {
+	 $ChosenCategory = $_POST['Category_Descriptions'];
+     $ChosenDifficulty = $_POST['Difficulty'];
+     getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
+     $index=0;
+    function sentQuestions($con,$index,$QuestionResult){
 		
-       // $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
-        //$result = mysqli_query($con, $query);
+       $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
+        $result = mysqli_query($con, $query);
         $index++;
         return $NextQuestions=$QuestionResult[$index]['question_text'];
 
-   }
-
+    }
     StoreMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer);
+
+    }
     
     
 ?>
@@ -54,7 +54,7 @@ session_start();
                 <li><a href="nikosProfil.php">Profil</a></li>
             </ul>
             </nav>
-            <a class="logoutButton" href="nikosLogin.php"><button>Logout</button></a>
+            <a class="logoutButton" href="login.php"><button>Logout</button></a>
         </header>
         
 

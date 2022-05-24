@@ -44,7 +44,7 @@ session_start();
                 <li><a href="nikosProfil.php">Profil</a></li>
             </ul>
             </nav>
-            <a class="logoutButton" href="nikosLogin.php"><button>Logout</button></a>
+            <a class="logoutButton" href="login.php"><button>Logout</button></a>
         </header>
 
         <div class="container">
