@@ -9,14 +9,18 @@ session_start();
     
     getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
     $index=0;
-    function sentQuestions($con,$index,$QuestionResult){
+    function sentQuestions(/*$con,*/$index,$QuestionResult){
 		
-        $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
-        $result = mysqli_query($con, $query);
+       // $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
+        //$result = mysqli_query($con, $query);
         $index++;
         return $NextQuestions=$QuestionResult[$index]['question_text'];
 
    }
+
+    StoreMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer);
+    
+    
 ?>
 
 
