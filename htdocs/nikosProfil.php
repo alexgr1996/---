@@ -5,7 +5,11 @@ session_start();
 	include("functions.php");
 
 	$user_data = check_login($con);
-    ReturnScore($con,$Difficutly,$user_data['user_id']);
+    ReturnAllUSerQuizzes($con,$user_data['user_id']);
+    ReturnScore($con,$Difficutly,$user_data['user_id'],$QuizID);
+    ReturnFullDoneQuiz($con,$QuizID);
+    
+
 ?>
 
 
@@ -40,7 +44,7 @@ session_start();
                 <li><a href="nikosProfil.php">Profil</a></li>
             </ul>
             </nav>
-            <a class="logoutButton" href="nikosLogin.php"><button>Logout</button></a>
+            <a class="logoutButton" href="login.php"><button>Logout</button></a>
         </header>
 
         <div class="container">

@@ -4,19 +4,24 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
-	$ChosenCategory = $_POST['Category_Descriptions'];
-    $ChosenDifficulty = $_POST['Difficulty'];
-    
-    getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
-    $index=0;
-    function sentQuestions($con,$index,$QuestionResult){
+    // if($_SERVER['REQUEST_METHOD'] == "POST") {
+	 $ChosenCategory = $con->query("select description from categories");
+     $ChosenDifficulty = $_POST['Difficulty'];
+    //  getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
+    //  $index=0;
+    // function sentQuestions($con,$index,$QuestionResult){
 		
-        $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
-        $result = mysqli_query($con, $query);
-        $index++;
-        return $NextQuestions=$QuestionResult[$index]['question_text'];
+    //    $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
+    //     $result = mysqli_query($con, $query);
+    //     $index++;
+    //     return $NextQuestions=$QuestionResult[$index]['question_text'];
 
-   }
+    // }
+    // StoreMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer);
+
+    // }
+    
+    
 ?>
 
 
@@ -50,7 +55,7 @@ session_start();
                 <li><a href="nikosProfil.php">Profil</a></li>
             </ul>
             </nav>
-            <a class="logoutButton" href="nikosLogin.php"><button>Logout</button></a>
+            <a class="logoutButton" href="login.php"><button>Logout</button></a>
         </header>
         
 
@@ -67,14 +72,16 @@ session_start();
                 </ul>
             </div> -->
 
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+            <form method="post">
                 <div>
-                    <label for="colors">Περιεχόμενα:</label>
-                    <select name="colors[]" id="colors">
-                        <option value="red">Γεωγραφία</option>
-                        <option value="green">Τεχνολογία</option>
-                        <option value="blue">Ιστορία</option>
-                        <option value="purple">Φαγητό</option>
+                    <label for="Category_Descriptions">Περιεχόμενα:</label>
+                    <select name="Category_Descriptions">
+                    <?php 
+                        while($rows = $ChosenCategory->fetch_assoc() ){
+                            $category_name = $rows['description'];
+                            echo "<option value='$category_name'>$category_name</option>";
+                        }
+                    ?>
                     </select>
                 </div>
                 <div>
@@ -94,8 +101,8 @@ session_start();
 
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
                 <div>
-                    <label for="colors">Δυσκολία:</label>
-                    <select name="colors[]" id="colors">
+                    <label for="Difficulty">Δυσκολία:</label>
+                    <select name="Difficulty[]" id="Difficulty">
                         <option value="1">Εύκολο</option>
                         <option value="2">Μέτριο</option>
                         <option value="3">Δύσκολο</option>
