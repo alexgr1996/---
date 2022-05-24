@@ -3,22 +3,23 @@ session_start();
 
 	include("connection.php");
 	include("functions.php");
-    if($_SERVER['REQUEST_METHOD'] == "POST") {
-	 $ChosenCategory = $_POST['Category_Descriptions'];
+
+    // if($_SERVER['REQUEST_METHOD'] == "POST") {
+	 $ChosenCategory = $con->query("select description from categories");
      $ChosenDifficulty = $_POST['Difficulty'];
-     getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
-     $index=0;
-    function sentQuestions($con,$index,$QuestionResult){
+    //  getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
+    //  $index=0;
+    // function sentQuestions($con,$index,$QuestionResult){
 		
-       $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
-        $result = mysqli_query($con, $query);
-        $index++;
-        return $NextQuestions=$QuestionResult[$index]['question_text'];
+    //    $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
+    //     $result = mysqli_query($con, $query);
+    //     $index++;
+    //     return $NextQuestions=$QuestionResult[$index]['question_text'];
 
-    }
-    StoreMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer);
+    // }
+    // StoreMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer);
 
-    }
+    // }
     
     
 ?>
@@ -71,14 +72,16 @@ session_start();
                 </ul>
             </div> -->
 
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+            <form method="post">
                 <div>
                     <label for="Category_Descriptions">Περιεχόμενα:</label>
-                    <select name="Category_Descriptions[]" id="Category_Descriptions">
-                        <option value="1">Γεωγραφία</option>
-                        <option value="2">Τεχνολογία</option>
-                        <option value="3">Ιστορία</option>
-                        <option value="4">Φαγητό</option>
+                    <select name="Category_Descriptions">
+                    <?php 
+                        while($rows = $ChosenCategory->fetch_assoc() ){
+                            $category_name = $rows['description'];
+                            echo "<option value='$category_name'>$category_name</option>";
+                        }
+                    ?>
                     </select>
                 </div>
                 <div>
