@@ -5,7 +5,11 @@ session_start();
 	include("functions.php");
 
 	$user_data = check_login($con);
-    ReturnScore($con,$Difficutly,$user_data['user_id']);
+    ReturnAllUSerQuizzes($con,$user_data['user_id']);
+    ReturnScore($con,$Difficutly,$user_data['user_id'],$QuizID);
+    ReturnFullDoneQuiz($con,$QuizID);
+    
+
 ?>
 
 
