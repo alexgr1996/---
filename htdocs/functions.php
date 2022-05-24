@@ -119,9 +119,9 @@ function random_num($length)
 
 
 	function getQuestion($con,$ChosenDifficulty,$ChosenCategory) {
-		$query="select id  from questions Q JOIN  categories C ON Q.category_id=C.id  Where difficulty =  '$ChosenDifficulty' AND C.category_id ='$ChosenCategory'  " ;
+		$query="select id  from questions Q JOIN  categories C ON Q.category_id=C.id  Where difficulty =  '$ChosenDifficulty' AND C.category_id ='$ChosenCategory' ORDER BY RAND() LIMIT 10 " ;
 		 $QuestionResult= mysqli_query($con,$query);
-		 $numofrow = mysqli_num_rows($QuestionResult);
+		 /*$numofrow = mysqli_num_rows($QuestionResult);
 		 $SelectedQuestions = array(10);
 		 
 		  $chosenRAND = rand(1,$numofrow);
@@ -138,27 +138,45 @@ function random_num($length)
 		  }
 		  while( $i=10 );
 	
-		  return $SelectedQuestions;
+		  return $SelectedQuestions;*/
+
+		  return $QuestionResult;
 		}
 
+		
+
+		
 
 
 
 
-
-	function sentQuestions($con,$index,$SelectedQuestions){
-
-	     $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
-		 $result = mysqli_query($con, $query);
-
-	}
-
-	function ReturnMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer){
-		$query = "insert into quiz_executons(QuestionText,CorrectAnswer,WrongAns,WrongAns2,WrongAns3,Difficutly,Category,user_id,QuizID,UserAnswer) values('$QuestionText','$CorrectAnswer','$WrongAns','$WrongAns2','$WrongAns3','$Difficutly','$Category','$quiz_user_id','$QuizID','$UserAnswer')";
+	function StoreMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer){
+		$query = "insert into executed_quizzes(QuestionText,CorrectAnswer,WrongAns,WrongAns2,WrongAns3,Difficutly,Category,user_id,QuizID,UserAnswer) values('$QuestionText','$CorrectAnswer','$WrongAns','$WrongAns2','$WrongAns3','$Difficutly','$Category','$quiz_user_id','$QuizID','$UserAnswer')";
 		mysqli_query($con,$query);
 		}
 
+	function ReturnScore($con,$Difficutly,$quiz_user_id){
+		$query = "select  COUNT(UserAnswer),Difficutly from executed_quizzes  where quiz_user_id = '$quiz_user_id' AND  CorrectAnswer = UserAnswer  AND Difficutly=$Difficutly  limit 1" ; 
+		$result = mysqli_query($con, $query);
+		$user_answer_data = mysqli_fetch_assoc($result);
+		if($user_answer_data['Difficutly']==1)
+		return  $user_answer_data['COUNT(UserAnswer)'];
+			elseif ($user_answer_data['Difficutly']==2)
+			return  $user_answer_data['COUNT(UserAnswer)']*2;
+				 else
+				 return  $user_answer_data['COUNT(UserAnswer)']*3;
 
+		
+		return $result;
+	}	
+
+	
+	function ReturnAllUSerQuizzes($con,$Category,$QuizID,$quiz_user_id,$Difficutly){
+		$query = "select  Category,Difficutly from executed_quizzes  where quiz_user_id = '$quiz_user_id' AND  Category = Category  AND Difficutly= '$Difficutly' ";
+
+
+
+	}
 
 	function startTest() {
 		header("location: nikosTest.php");

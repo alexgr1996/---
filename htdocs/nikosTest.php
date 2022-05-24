@@ -8,7 +8,15 @@ session_start();
     $ChosenDifficulty = $_POST['Difficulty'];
     
     getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
-    sentQuestions($con,$TwriniErwtitisi,$SelectedQuestions,);
+    $index=0;
+    function sentQuestions($con,$index,$QuestionResult){
+		
+        $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
+        $result = mysqli_query($con, $query);
+        $index++;
+        return $NextQuestions=$QuestionResult[$index]['question_text'];
+
+   }
 ?>
 
 
@@ -99,11 +107,11 @@ session_start();
             </form>
 
             <div class="center">
-                <a href="quiz.html">
-                    <button id="takeQuizButton" type="button">
+           
+                    <button id="takeQuizButton" type="button"  >
                         <b>Take Quiz</b>
                     </button>
-                </a>
+              
             </div>
         </div>
     </div>
