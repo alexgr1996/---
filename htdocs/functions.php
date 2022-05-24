@@ -119,7 +119,7 @@ function random_num($length)
 
 
 	function getQuestion($con,$ChosenDifficulty,$ChosenCategory) {
-		$query="select id  from questions Q JOIN  categories C ON Q.category_id=C.id  Where difficulty =  '$ChosenDifficulty' AND C.category_id ='$ChosenCategory' ORDER BY RAND() LIMIT 10 " ;
+		$query="select question_text,id  from questions Q JOIN  categories C ON Q.category_id=C.id  Where difficulty =  '$ChosenDifficulty' AND C.category_id ='$ChosenCategory' ORDER BY RAND() LIMIT 10 " ;
 		 $QuestionResult= mysqli_query($con,$query);
 		 /*$numofrow = mysqli_num_rows($QuestionResult);
 		 $SelectedQuestions = array(10);
@@ -145,9 +145,6 @@ function random_num($length)
 
 		
 
-		
-
-
 
 
 	function StoreMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer){
@@ -155,8 +152,18 @@ function random_num($length)
 		mysqli_query($con,$query);
 		}
 
-	function ReturnScore($con,$Difficutly,$quiz_user_id){
-		$query = "select  COUNT(UserAnswer),Difficutly from executed_quizzes  where quiz_user_id = '$quiz_user_id' AND  CorrectAnswer = UserAnswer  AND Difficutly=$Difficutly  limit 1" ; 
+
+	function ReturnAllUSerQuizzes($con,$quiz_user_id){
+			$query = "select   Category,Difficutly,DATE,QuizID  from executed_quizzes  where quiz_user_id = '$quiz_user_id' ";
+			$result = mysqli_query($con, $query);
+			return $result;
+	
+		}
+
+
+
+	function ReturnScore($con,$Difficutly,$quiz_user_id,$QuizID){
+		$query = "select  COUNT(UserAnswer),Difficutly from executed_quizzes  where QuizID=$QuizID AND quiz_user_id = '$quiz_user_id' AND  CorrectAnswer = UserAnswer  AND Difficutly=$Difficutly  limit 1" ; 
 		$result = mysqli_query($con, $query);
 		$user_answer_data = mysqli_fetch_assoc($result);
 		if($user_answer_data['Difficutly']==1)
@@ -170,12 +177,10 @@ function random_num($length)
 		return $result;
 	}	
 
-	
-	function ReturnAllUSerQuizzes($con,$Category,$QuizID,$quiz_user_id,$Difficutly){
-		$query = "select  Category,Difficutly from executed_quizzes  where quiz_user_id = '$quiz_user_id' AND  Category = Category  AND Difficutly= '$Difficutly' ";
-
-
-
+	function ReturnFullDoneQuiz($con,$QuizID){
+		$query = "select   question_text,correct_answer,user_answer  from executed_quizzes  where QuizID = '$QuizID' ";
+		$result = mysqli_query($con, $query);
+		return $result;
 	}
 
 	function startTest() {
