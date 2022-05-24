@@ -69,12 +69,12 @@ session_start();
 
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
                 <div>
-                    <label for="colors">Περιεχόμενα:</label>
-                    <select name="colors[]" id="colors">
-                        <option value="red">Γεωγραφία</option>
-                        <option value="green">Τεχνολογία</option>
-                        <option value="blue">Ιστορία</option>
-                        <option value="purple">Φαγητό</option>
+                    <label for="Category_Descriptions">Περιεχόμενα:</label>
+                    <select name="Category_Descriptions[]" id="Category_Descriptions">
+                        <option value="1">Γεωγραφία</option>
+                        <option value="2">Τεχνολογία</option>
+                        <option value="3">Ιστορία</option>
+                        <option value="4">Φαγητό</option>
                     </select>
                 </div>
                 <div>
@@ -94,8 +94,8 @@ session_start();
 
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
                 <div>
-                    <label for="colors">Δυσκολία:</label>
-                    <select name="colors[]" id="colors">
+                    <label for="Difficulty">Δυσκολία:</label>
+                    <select name="Difficulty[]" id="Difficulty">
                         <option value="1">Εύκολο</option>
                         <option value="2">Μέτριο</option>
                         <option value="3">Δύσκολο</option>
