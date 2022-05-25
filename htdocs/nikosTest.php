@@ -6,7 +6,7 @@ session_start();
 
     // if($_SERVER['REQUEST_METHOD'] == "POST") {
 	 $ChosenCategory = $con->query("select description from categories");
-     $ChosenDifficulty = $_POST['Difficulty'];
+    //  $ChosenDifficulty = $_POST['Difficulty'];
     //  getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
     //  $index=0;
     // function sentQuestions($con,$index,$QuestionResult){
