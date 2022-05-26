@@ -32,7 +32,7 @@
 
     <section>
       <!--style="margin-right:5px;" -->
-        <h3 style="margin-right:10px;" >Chose a level: <br>
+        <h3 style="margin-right:10px;" class="choose-a-category" >Choose a level: <br>
               <div><button class="neon" ><a href="quiz.php"> Easy </a></button> </div>
               <div><button class="neon"><a href="quiz.php"> Medium </a></button> </div>
               <button class="neon"><a href="quiz.php"> Hard </a></button> 
