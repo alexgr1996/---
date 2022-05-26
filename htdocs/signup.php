@@ -46,7 +46,7 @@ session_start();
 
 			header("Location: login.php");
 			die;
-		}else
+		} else
 		{
 			echo "Please enter some valid information!";
 		}
@@ -55,55 +55,77 @@ session_start();
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <link rel="stylesheet" href="../css/bootstrap.css">
-	<title>Signup</title>
+  <link rel="stylesheet" href="../css/our.css">
+  <link rel="stylesheet" href="../css/test.css">
+  <link rel="stylesheet" href="../css/info.css">
+
+  <script type="text/javascript" src="../js/javascript.js"></script>
+
+  <title>Sign Up</title>
 </head>
 <body>
 
-	<style type="text/css">
-	
-	#text{
+  <header>
+    <img class="logo circular--square" src="../html/lg.jpg" alt="logo">
+  </header>
+<br>
 
-		height: 25px;
-		border-radius: 5px;
-		padding: 4px;
-		border: solid thin #aaa;
-		width: 100%;
-	}
-
-	#button{
-
-		padding: 10px;
-		width: 100px;
-		color: white;
-		background-color: lightblue;
-		border: none;
-	}
-
-	#box{
-
-		background-color: grey;
-		margin: auto;
-		width: 300px;
-		padding: 20px;
-	}
-
-	</style>
-
-	<div id="box">
-		
-	<form method="post">
-			<div><?php 
+  <div class="center">
+    <h2>Sing Up</h2>
+    <p style="text-align: center;">Σύνδεση στο σύστημα squiz</p>
+	<!-- action= index.html or login.html-->
+    <form class="" method="post">
+	<div><?php 
 				if(isset($Error) && $Error != "")
 				{
 					echo $Error;
 				}
-			?>
+			?></div>
+
+
+			<div class="txt_field"> <br>
+              <label class="label">Email:</label>
+              <input type="text" id="name" name="user_mail"  >
+            </div>
+
+            <div class="txt_field"> <br>
+              <label class="label">Username:</label>
+              <input type="text"  id="name" name="user_name"  >
+            </div><br>
+
+            <div class="txt_field">
+              <label>Password</label>
+              <input type="password" id="password" name="password" >
+            </div><br>
+
+            <div class="txt_field">
+              <label>Confirm Password:</label>
+              <input type="password"  name="confirm_password" >
+            </div><br>
+
+        <input id="button" type="submit" value="Signup" class="btn btn-primary"> 
+    </form>
+  </div>
+
+
+
+
+</body>
+</html>
+
+
+	<!-- <div id="box">
+		
+	<form method="post">
+			<div>
+
 			</div>
 			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
 			<input id="text" type="email" name="user_mail" placeholder="Email"><br><br>
@@ -117,4 +139,4 @@ session_start();
 		</form>
 	</div>
 </body>
-</html>
+</html> -->

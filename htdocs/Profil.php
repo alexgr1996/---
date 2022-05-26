@@ -5,9 +5,9 @@ session_start();
 	include("functions.php");
 
 	$user_data = check_login($con);
-    ReturnAllUSerQuizzes($con,$user_data['user_id']);
-    ReturnScore($con,$Difficutly,$user_data['user_id'],$QuizID);
-    ReturnFullDoneQuiz($con,$QuizID);
+    // ReturnAllUSerQuizzes($con,$user_data['user_id']);
+    // ReturnScore($con,$Difficutly,$user_data['user_id'],$QuizID);
+    // ReturnFullDoneQuiz($con,$QuizID);
     
 
 ?>
@@ -36,32 +36,43 @@ session_start();
   <body>
   
     <div class="WebContainer">
-        <header>
-            <img class="logo circular--square" src="../html/lg.jpg" alt="logo">
-            <nav>
-            <ul class="nav_links">
-                <li><a href="nikosTest.php">Home</a></li>
-                <li><a href="nikosProfil.php">Profil</a></li>
-            </ul>
-            </nav>
-            <a class="logoutButton" href="login.php"><button>Logout</button></a>
-        </header>
+        <div class="header">
+            <header>
+                <img class="logo circular--square" src="../html/lg.jpg" alt="logo">
+                <nav>
+                <ul class="nav_links">
+                    <li><a href="ChooseTest.php">Home</a></li>
+                    <li><a href="Profil.php">Profil</a></li>
+                </ul>
+                </nav>
+                <a class="logoutButton" href="login.php"><button>Logout</button></a>
+            </header>
+        </div>
 
         <div class="container">
         <h2>
-            <span>
-                <?php echo $user_data['user_name']; ?>
-            </span> info
+            ACCOUNT INFORMATION
         </h2>
 
         <table>
             <tr>
-            <th>quiz</th>
-            <th>difficulty</th>
+                <th>ID</th>
+                <td><?php echo $user_data['user_id']; ?></td>
             </tr>
+
             <tr>
-            <td>quiz id</td>
-            <td>difficulty</td>
+                <th>USERNAME</th>
+                <td><?php echo $user_data['user_name']; ?></td>
+            </tr>
+
+            <tr>
+                <th>EMAIL</th>
+                <td><?php echo $user_data['user_mail']; ?></td>
+            </tr>
+
+            <tr>
+                <th>DATE</th>
+                <td><?php echo $user_data['date']; ?></td>
             </tr>
         </table>
         </div>
