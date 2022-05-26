@@ -17,12 +17,12 @@ function send_mail($recipient,$subject,$message)
   $mail->Port       = 587;
   $mail->Host       = "smtp.gmail.com";
   //$mail->Host       = "smtp.mail.yahoo.com";
-  $mail->Username   = "yourgmail";
-  $mail->Password   = "your app password or your gmailpassword";
+  $mail->Username   = "adopse123@gmail.com";
+  $mail->Password   = "!a12345678";
 
   $mail->IsHTML(true);
   $mail->AddAddress($recipient, "esteemed user");
-  $mail->SetFrom("youremail", "Squize");
+  $mail->SetFrom("adopse1@gmail23.com", "Squize");
   //$mail->AddReplyTo("reply-to-email", "reply-to-name");
   //$mail->AddCC("cc-recipient-email", "cc-recipient-name");
   $mail->Subject = $subject;

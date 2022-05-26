@@ -1,10 +1,10 @@
 <?php 
 session_start();
-	include("connection.php");
-	include("functions.php");
 $error = array();
 
 require "mail.php";
+include("connection.php");
+include("functions.php");
 	//if(!$con){
 
 		//die("could not connect");
