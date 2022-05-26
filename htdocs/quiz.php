@@ -4,8 +4,32 @@
 	include("connection.php");
 	include("functions.php");
     // $user_data = check_login($con);
+	include("ChooseDifficulty.php");
+    include("ChooseTest.php");
 
+    
+    getQuestion($con,$ChosenDifficulty,$ChosenCategory); 
+
+
+     
+    
+     
+     $index=0;
+     function sentQuestions($index,$QuestionResult){
+        $QuestionNextText=[20][20];
+   // $query= "select question_text  from  questions WHERE id= $index";//         ,CorrectAnswer,WrongAns,WrongAns2,WrongAns3 From questions q INNER JOIN "
+   // $result = mysqli_query($con, $query);
+    $QuestionNextText[$index]['question_text']  == $QuestionResult[$index]["id"];
+    $index++;
+    return $QuestionNextText[$index]['question_text'];//Next Question
+
+     }
+     StoreMetaData($con,$QuestionText,$CorrectAnswer,$WrongAns,$WrongAns2,$WrongAns3,$Difficutly,$Category,$quiz_user_id ,$QuizID,$UserAnswer);
+
+    
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
