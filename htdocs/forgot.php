@@ -85,32 +85,24 @@ require "mail.php";
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Forgot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../css/bootstrap.css"> 
+  <link rel="stylesheet" href="../css/our.css">
+  <link rel="stylesheet" href="../css/info.css"> 
+  <link rel="stylesheet" href="../css/test.css">
+
+  <title>Forgot your Password ?</title>
 </head>
 <body>
-<style type="text/css">
-	
-	*{
-		font-family: tahoma;
-		font-size: 13px;
-	}
-
-	form{
-		width: 100%;
-		max-width: 200px;
-		margin: auto;
-		border: solid thin #ccc;
-		padding: 10px;
-	}
-
-	.textbox{
-		padding: 5px;
-		width: 180px;
-	}
-</style>
+	<header>
+          <img class="logo circular--square" src="../html/lg.jpg" alt="logo">
+    </header>
+    <br>
 
 		<?php 
 
@@ -119,6 +111,7 @@ require "mail.php";
 					// code...
 					?>
 						<form method="post" action="forgot.php?mode=enter_email"> 
+						<div class="center">
 							<h1>Forgot Password</h1>
 							<h3>Enter your email below</h3>
 							<span style="font-size: 12px;color:red;">
@@ -134,6 +127,7 @@ require "mail.php";
 							<input type="submit" value="Next">
 							<br><br>
 							<div><a href="login.php">Login</a></div>
+						</div>
 						</form>
 					<?php				
 					break;
@@ -142,6 +136,7 @@ require "mail.php";
 					// code...
 					?>
 						<form method="post" action="forgot.php?mode=enter_code"> 
+						<div class="center">
 							<h1>Forgot Password</h1>
 							<h3>Enter your the code sent to your email</h3>
 							<span style="font-size: 12px;color:red;">
@@ -161,6 +156,7 @@ require "mail.php";
 							</a>
 							<br><br>
 							<div><a href="login.php">Login</a></div>
+						</div>
 						</form>
 					<?php
 					break;
@@ -169,6 +165,7 @@ require "mail.php";
 					// code...
 					?>
 						<form method="post" action="forgot.php?mode=enter_password"> 
+						<div class="center">
 							<h1>Forgot Password</h1>
 							<h3>Enter your new password</h3>
 							<span style="font-size: 12px;color:red;">
@@ -189,6 +186,7 @@ require "mail.php";
 							</a>
 							<br><br>
 							<div><a href="login.php">Login</a></div>
+						</div>
 						</form>
 					<?php
 					break;
