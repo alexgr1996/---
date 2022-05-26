@@ -58,7 +58,6 @@
           <li><a class="logoutButton" href="../html/welcome.html"><button>Logout</button></a></li>
         </ol>
       </nav>
-
   </header>
 
 <div class="container"> <section ></section>
