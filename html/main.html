@@ -13,109 +13,65 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
   
-  <link rel="stylesheet" href="../css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" 
-        integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous"
-        type="text/css">  
-
-  <style>
-    ul{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-
-    ul li a .fa{
-      font-size: 40px;
-      color: #333;
-      line-height: 80px;
-      transition: 0.5s;
-      padding-right: 14px;
-    }
-
-    ul li a {
-      text-decoration: none;
-      display: absolute;
-      display: block;
-      width: 210px;
-      height: 80px;
-      background: #fff;
-      text-align: left;
-      padding-left: 20px;
-      transform: rotate(-30deg) skewX(25deg) translate(0,0);
-      transition: 0.5s;
-      box-shadow: -20px 20px 10px rgba(0,0,0,0.5);  
-    
-    } 
-
-  </style>
-
-  
-  <title>Main</title>
+  <title>Menu</title>
 </head>
 <body>
 
-  <header>
-      <img class="logo circular--square" src="lg.jpg" alt="logo">
- <!---
+  <header >
+    <img class="logo circular--square" src="lg.jpg" alt="logo">
+    
       <nav>
-            <ul class="nav_links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Profil</a></li>
-            </ul>
-        </nav>
-      <a class="logoutButton" href="login.html"><button>Logout</button></a>
-      -->
-    </header>
+        <ol class="nav_links" >
+          <li><a  href="main.html"><button> Home Page </button></a></li>
+          <li><a href="profile.html"><button> Profile </button></a></li>
+          <li><a href="#"><button> Contact us </button></a></li>
+          <li><a class="logoutButton" href="welcome.html"><button>Logout</button></a></li>
+        </ol>
+      </nav>
 
+  </header>
 
+<div class="container"> <section ></section>
+    <ul>
+      <br><br>
+        <li>
+          <a href="choose.html">
+            <span>Geography</span>
+          </a>
+        </li>
 
-<ul>
-  <li>
-    <a href="#">
-      <i class="fa-solid fa-globe-stand"></i>
-      <span>Geo</span>
-    </a>
-  </li>
+        <li>
+          <a href="choose.html">
+            <span>Tecnology</span>
+          </a>
+        </li>
 
+        <li>
+          <a href="choose.html">
+            <span>History</span>
+          </a>
+        </li>
 
-<br>
-
-  <li>
-    <a href="#">
-      <i class="fa-regular fa-brain-circuit" e0c6></i>
-      <span>- Texno</span>
-    </a>
-  </li>
-
-  <li>
-    <a href="#">
-      <i class="fa fa-university" aria-hidden="true"></i>
-      <span>Isto</span>
-    </a>
-  </li>
-
-  <li>
-    <a href="#">
-      <i class="fa-regular fa-masks-theater"></i>
-      <span>Art</span>
-    </a>
-  </li>
-</ul>
-
+        <li>
+          <a href="choose.html">
+            <span>Arts</span>
+          </a>
+        </li>
+    </ul>
+  <br><br>
+  <br><br>
+</div>
 
 
 
 
+</body>
+</html>
 
 
+<!---
 
-
-  <!---
+<section class="glass">  </section>
 
   <div class="dropdown">
 	  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -146,5 +102,3 @@
     <br><br>
   </a>
 -->
-</body>
-</html>

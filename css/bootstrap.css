@@ -83,15 +83,6 @@ padding: 40px;
 
 /*  g  */
 
-/*
-body{
-  background: url("../html/8.jpg ");
-  background-size: cover;
-  height: 100vh;
-  background-position: center center;
-  position: relative;
-}
-*/
 
 div, img{
   text-align: center;
@@ -130,16 +121,6 @@ img {
     box-sizing: border-box;
   /*  background-color: #876445 ; */
 }
-
-
-
-
-
-
-
-
-
-
 
 
 section{
