@@ -56,7 +56,7 @@
     
       <nav>
         <ol class="nav_links" >
-          <li><a  href="ChooseDifficulty.php"><button> Home Page </button></a></li>
+          <li><a  href="ChooseTest.php"><button> Home Page </button></a></li>
           <li><a href="Profil.php"><button> Profile </button></a></li>
           <!-- <li><a href="#"><button> Contact us </button></a></li> -->
           <li><a class="logoutButton" href="../html/welcome.html"><button>Logout</button></a></li>
