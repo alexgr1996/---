@@ -74,3 +74,7 @@
     box-shadow: 0 0 10px 2px;
   }
  
+  .choose-a-category {
+    font-size: 100px;
+    font-weight: bold;
+  }
