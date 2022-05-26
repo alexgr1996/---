@@ -91,17 +91,17 @@
 
   /*h panw epifania toy koympiou 3d */
   ul li:hover a{
-    background: #dd4b39;
+    background: #d34fdf;
   }
 
   /* mikro toixaki 3d */
   ul li:hover a:before{
-    background: #b33a2b;
+    background: #a32bb3;
   }
 
   /* plai megalo toixaki xrwma 3d */
   ul li:hover a:after{
-    background: #e66a5a;
+    background: #ae5ae6;
   }
 
   li, a, button {
@@ -142,12 +142,12 @@
   }
 
   .nav_links li a:hover {
-    color: #0088a9;
+    color: #979494;
   }
 
   button {
     padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
+    background-color: rgb(219, 185, 74);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -236,6 +236,7 @@
     outline: none;
   }
   
+  /*
   .txt-field span::before{
     content: '';
     position: absolute;
@@ -245,11 +246,14 @@
     transition: .5s;
   }
 
+
   .txt-field input:focus ~ label,
   .txt-field input:valid ~ label{
     top: -5px;
     color: #2691d9;
   }
+
+    */
 
   .txt-field input:focus ~ span::before,
   .txt-field input:valid ~ span::before{
@@ -321,25 +325,25 @@
       margin: 1rem 0.5rem;
       border-width: 1px;
       border-style: solid;
-      border-color: #CE9461 #E5CB9F #E5CB9F brown; /* outline neon-button (περίγραμμα) */
+      border-color: #6175ce #cf9fe5 #cb9fe5 rgb(54, 42, 165); /* outline neon-button (περίγραμμα) */
 
       border-radius: 3rem;
       font-size: 0.80rem;
       /* font-weight: bold;  */
       cursor:pointer;
       background-color:transparent;
-      background-image: linear-gradient(to bottom right, #CE9461, #E5CB9F  );
+      background-image: linear-gradient(to bottom right, #6372c9, #e59fe1  );
       background-clip:text;
-      box-shadow: -2px -2px 0.5rem #CE9461,       
-                  2px 2px 0.5rem inset #CE9461,
-                  2px 2px 0.5rem #E5CB9F,
-                  2px 2px 0.5rem inset #E5CB9F; /* σκούρο-σκούρο, ανοιχτό-ανοιχτό */
+      box-shadow: -2px -2px 0.5rem #6372c9,       
+                  2px 2px 0.5rem inset #6372c9,
+                  2px 2px 0.5rem #e59fe1,
+                  2px 2px 0.5rem inset #e59fe1; /* σκούρο-σκούρο, ανοιχτό-ανοιχτό */
   }
 
   .neon:hover{
       color:black;
       background-clip:border-box;
-      box-shadow: -0.5rem -0.25rem 2rem #CE9461;
+      box-shadow: -0.5rem -0.25rem 2rem #6372c9;
   }
 
   .pin{
@@ -370,7 +374,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #87644574;
+    background-color: #92a0ac;
     margin: 0;
   }
   
@@ -438,31 +442,6 @@
       flex-direction: row;
   }
   
-  .neon{
-      padding: 1rem 2rem;
-      margin: 1rem 0.5rem;
-      border-width: 1px;
-      border-style: solid;
-      border-color: #CE9461 #E5CB9F #E5CB9F brown; /* outline neon-button (περίγραμμα) */
-  
-      border-radius: 3rem;
-      font-size: 0.80rem;
-      font-weight: bold; 
-      cursor:pointer;
-      background-color:transparent;
-      background-image: linear-gradient(to bottom right, #CE9461, #E5CB9F  );
-      background-clip:text;
-      box-shadow: -2px -2px 0.5rem #CE9461,       
-                   2px 2px 0.5rem inset #CE9461,
-                   2px 2px 0.5rem #E5CB9F,
-                   2px 2px 0.5rem inset #E5CB9F; /* σκούρο-σκούρο, ανοιχτό-ανοιχτό */
-  }
-  
-  .neon:hover{
-      color:black;
-      background-clip:border-box;
-      box-shadow: -0.5rem -0.25rem 2rem #CE9461;
-  }
   
   [tabindex="-1"]:focus {
     outline: 0 !important;
@@ -483,7 +462,6 @@
     margin-top: 0;
     margin-bottom: 1rem;
   }
-
 
 
 
@@ -509,30 +487,28 @@
 .glass{
   background: lightblue;
   min-height: 5px;
-
+*/
 /*  background: linear-gradient
                   (to right bottom, 
                   rgba(228, 137, 137, 0.7),
                   rgba(190, 123, 123, 0.3));
-*//*
+
   border-radius: 2rem;
   z-index: 2;
   backdrop-filter: blur(2rem);
   display: flex;
-  height: 65%;          /* kontema *//*
+  height: 65%;          *//* kontema *//*
   padding: 10px;
-  margin-top: 10px;     /* ipsos *//*
-  width: 10%;           /* steno *//*
+  margin-top: 10px;     *//* ipsos *//*
+  width: 10%;           *//* steno *//*
 } 
 
-
-/*
 
 .banner{
   width: 100%;
   height: 100vh;
   background-image: linear-
-  gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(../html/65.jpg);  /* bg */  
+  gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(../html/65.jpg); */ /* bg */  
   
   /*
   background-size: cover;
@@ -568,7 +544,7 @@
   font-weight: 100;
   line-height: 25px;
 }
-*//*
+
 
 
 *{

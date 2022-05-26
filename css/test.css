@@ -6,8 +6,6 @@
     box-sizing: border-box;
   }
 
-
-
   * {
     box-sizing: border-box;
     margin: 0;
@@ -51,19 +49,19 @@
   }
 
   a {
-    color: rgb(169, 0, 65);
+    color: black
     text-align: center;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2vw;
   }
 
+  /*
   a:hover {
-    color: rgb(169, 0, 65);;
+    color: rgb(141, 147, 165);
     transition: 3s;
   }
-
-
+*/
 
   .circular--square { 
     border-radius: 50%; 
@@ -82,22 +80,25 @@
     transition: all 0.3s ease 0s;
   }
 
+  /*
   .nav_links li a:hover {
-    color: #0088a9;
+    color: red;
   }
+  */
 
+  /* color button when mouse on */
   button:hover {  
-    background-color: rgba(169, 0, 45, 0.8);
+    background-color: rgba(141, 147, 165, 0.8);
   }
 
   .quizButton {
-  /* padding:50px; 
-    margin-top:200px; 
-    margin-left:277px;  */
     font-size:30px;
     justify-content: center;
     align-items: center;
   }
+  /* padding:50px; 
+    margin-top:200px; 
+    margin-left:277px;  */
 
   .center-periexomena {
     margin-left: auto;
@@ -112,6 +113,8 @@
     margin-top: 0px;
   }
 
+  
+/*
   #diskolia {
     text-align: justify;
     text-overflow: clip;
@@ -126,7 +129,6 @@
 
 
 
-/*
 
 li {
   display: inline-block;

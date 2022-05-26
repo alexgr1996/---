@@ -153,19 +153,23 @@
     background-color: #9ab5ac;
   }
 
+  /*
   .qa_ans_row input:checked + spna{
     background-color: #f93c3c;
   }
+  */
 
   .qa_ans_row input[valid]:checked + span{
     background-color: greenyellow;
     color: #fff;
   }
 
+  /*
   .qa_footer{
     padding: 10px 0 0;
     text-align:right;
   }
+  */
 
   /* Start Quiz Button  */
   .start-btn button{
@@ -208,7 +212,7 @@
 
   .info_box .info_list .info span {
     font-weight: 600;
-    color: #007bff;
+    color: #ce80f1;
   }
 
   .info_box .buttons{
@@ -225,7 +229,7 @@
     height: 40px;
     width: 100px;
     outline: none;
-    border: 1px solid #007bff;
+    border: 1px solid #ce80f1;
     border-radius: 5px;
     color: #fff;
     font-size: 16px;
@@ -240,7 +244,7 @@
   }
 
   .buttons button.restart:hover{
-    color:#007bff;
+    color:#ce80f1;
     background:#fff ;
   }
 
@@ -249,7 +253,7 @@
   }
 
   .buttons button.quit:hover{
-    color:#007bff;
+    color:#ce80f1;
     background:#fff ; 
   }
 
@@ -317,6 +321,7 @@
     font-weight: 600;
   }
 
+  /*
   .quiz_box section .option_list{
     padding: 20px 0;
     display: block;
@@ -408,7 +413,7 @@
   }
 
 
-
+*/
 
 
 
