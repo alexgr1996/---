@@ -4,17 +4,8 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
-	$user_data = check_login($con);
-    ReturnAllUSerQuizzes($con,$user_data['user_id']);
-    ReturnScore($con,$Difficutly,$user_data['user_id'],$QuizID);
-    ReturnFullDoneQuiz($con,$QuizID);
-    
 
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +22,7 @@ session_start();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-    <title>Profile Menu</title>
+    <title>Quiz</title>
   </head>
   <body>
   
@@ -40,8 +31,8 @@ session_start();
             <img class="logo circular--square" src="../html/lg.jpg" alt="logo">
             <nav>
             <ul class="nav_links">
-                <li><a href="nikosTest.php">Home</a></li>
-                <li><a href="nikosProfil.php">Profil</a></li>
+                <li><a href="ChooseTest.php">Home</a></li>
+                <li><a href="Profil.php">Profil</a></li>
             </ul>
             </nav>
             <a class="logoutButton" href="login.php"><button>Logout</button></a>
@@ -51,7 +42,7 @@ session_start();
         <h2>
             <span>
                 <?php echo $user_data['user_name']; ?>
-            </span> info
+            </span> Quiz
         </h2>
 
         <table>

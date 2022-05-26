@@ -6,7 +6,7 @@ session_start();
 
     // if($_SERVER['REQUEST_METHOD'] == "POST") {
 	 $ChosenCategory = $con->query("select description from categories");
-    //  $ChosenDifficulty = $_POST['Difficulty'];
+     $ChosenDifficulty = $con->query("select difficulty from questions");
     //  getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
     //  $index=0;
     // function sentQuestions($con,$index,$QuestionResult){
@@ -51,8 +51,8 @@ session_start();
             <img class="logo circular--square" src="../html/lg.jpg" alt="logo">
             <nav>
             <ul class="nav_links">
-                <li><a href="nikosTest.php">Home</a></li>
-                <li><a href="nikosProfil.php">Profil</a></li>
+                <li><a href="ChooseTest.php">Home</a></li>
+                <li><a href="Profil.php">Profil</a></li>
             </ul>
             </nav>
             <a class="logoutButton" href="login.php"><button>Logout</button></a>
@@ -84,9 +84,9 @@ session_start();
                     ?>
                     </select>
                 </div>
-                <div>
+                <!-- <div>
                     <button type="submit">Submit</button>
-                </div>
+                </div> -->
             </form>
 
 
@@ -99,23 +99,23 @@ session_start();
                 <button type="button" class="btn btn-primary">Hard</button>
             </div> -->
 
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+            <form method="post">
                 <div>
                     <label for="Difficulty">Δυσκολία:</label>
-                    <select name="Difficulty[]" id="Difficulty">
-                        <option value="1">Εύκολο</option>
-                        <option value="2">Μέτριο</option>
-                        <option value="3">Δύσκολο</option>
+                    <select name="Difficulty">
+                    <option value='1'>Εύκολο</option>
+                    <option value='2'>Μέτριο</option>
+                    <option value='3'>Δύσκολο</option>
                     </select>
                 </div>
-                <div>
+                <!-- <div>
                     <button type="submit">Submit</button>
-                </div>
+                </div> -->
             </form>
 
             <div class="center">
            
-                    <button id="takeQuizButton" type="button"  >
+                    <button onclick="window.location.href='quiz.php'" id="takeQuizButton" type="button">
                         <b>Take Quiz</b>
                     </button>
               

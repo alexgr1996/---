@@ -28,7 +28,7 @@ session_start();
 					if($user_data['password'] === $password)
 					{
 						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: nikosTest.php");
+						header("Location: ChooseTest.php");
 						die;
 					}
 				}
@@ -50,9 +50,9 @@ session_start();
 <meta charset="UTF-8"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
   <link rel="stylesheet" href="../css/our.css"> -->
-  <!-- <script type="text/javascript" src="../js/javascript.js"> --> -->
+  <!-- <script type="text/javascript" src="../js/javascript.js"> -->
 
 	<title>Login</title>
 </head>
