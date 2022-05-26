@@ -27,16 +27,19 @@ session_start();
   <body>
   
     <div class="web_container">
-        <header id="header">
-            <img class="logo circular--square" src="../html/lg.jpg" alt="logo">
-            <nav>
-            <ul class="nav_links">
-                <li><a href="ChooseTest.php">Home</a></li>
-                <li><a href="Profil.php">Profil</a></li>
-            </ul>
-            </nav>
-            <a class="logoutButton" href="login.php"><button>Logout</button></a>
-        </header>
+        <div class="header">
+            <header>
+                <img class="logo circular--square" src="../html/lg.jpg" alt="logo">
+                <nav>
+                <ul class="nav_links">
+                    <li><a href="ChooseTest.php">Home</a></li>
+                    <li><a href="Profil.php">Profil</a></li>
+                </ul>
+                </nav>
+                <a class="logoutButton" href="login.php"><button>Logout</button></a>
+            </header>
+        </div>
+        
 
         <div class="container">
         <h2>
