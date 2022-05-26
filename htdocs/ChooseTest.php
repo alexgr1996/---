@@ -1,5 +1,5 @@
 <?php 
-session_start();
+// session_start();
 
 	include("connection.php");
 	include("functions.php");
@@ -76,11 +76,15 @@ session_start();
                 <div>
                     <label for="Category_Descriptions">Περιεχόμενα:</label>
                     <select name="Category_Descriptions">
-                    <?php 
+                    <?php
+                     
                         while($rows = $ChosenCategory->fetch_assoc() ){
                             $category_name = $rows['description'];
-                            echo "<option value='$category_name'>$category_name</option>";
+                            echo "<option value='$category_name'>$category_name</option>";   
                         }
+                        session_start();
+                        $_SESSION['cname'] = $category_name;
+    
                     ?>
                     </select>
                 </div>

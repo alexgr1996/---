@@ -1,9 +1,9 @@
 <?php 
-session_start();
+ session_start();
 
 	include("connection.php");
 	include("functions.php");
-    $user_data = check_login($con);
+    // $user_data = check_login($con);
 
 ?>
 <!DOCTYPE html>
@@ -44,7 +44,7 @@ session_start();
         <div class="container">
         <h2>
             <span>
-                <?php echo $user_data['user_name']; ?>
+                <?php echo $_SESSION['cname']; ?>
             </span> Quiz
         </h2>
 

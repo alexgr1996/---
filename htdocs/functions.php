@@ -115,9 +115,6 @@ function random_num($length)
 
 
 
-
-
-
 	function getQuestion($con,$ChosenDifficulty,$ChosenCategory) {
 		$query="select question_text,id  from questions Q JOIN  categories C ON Q.category_id=C.id  Where difficulty =  '$ChosenDifficulty' AND C.category_id ='$ChosenCategory' ORDER BY RAND() LIMIT 10 " ;
 		 $QuestionResult= mysqli_query($con,$query);
