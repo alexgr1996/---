@@ -1,5 +1,5 @@
 <?php 
- session_start();
+//  session_start();
 
 	include("connection.php");
 	include("functions.php");
@@ -41,7 +41,7 @@
         <div class="container">
         <h2>
             <span>
-                <?php echo $_SESSION['cname']; ?>
+                <?php session_start();echo $_SESSION['cname']; ?>
             </span> Quiz
         </h2>
 

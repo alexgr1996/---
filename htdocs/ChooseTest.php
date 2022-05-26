@@ -77,12 +77,12 @@
                     <label for="Category_Descriptions">Περιεχόμενα:</label>
                     <select name="Category_Descriptions">
                     <?php
-                     
+                     session_start();
                         while($rows = $ChosenCategory->fetch_assoc() ){
                             $category_name = $rows['description'];
                             echo "<option value='$category_name'>$category_name</option>";   
                         }
-                        session_start();
+                        
                         $_SESSION['cname'] = $category_name;
     
                     ?>
