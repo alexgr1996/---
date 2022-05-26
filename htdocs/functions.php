@@ -180,6 +180,47 @@ function random_num($length)
 		return $result;
 	}
 
+
+
+
+	function getAnswersFromDB($con,$QuestionResult) {
+		$index=0;
+		$CorrectAnswer=" ";
+		$WrongAns1=" ";
+		$WrongAns2=" ";
+		$WrongAns3=" ";
+		$SendQuestionsAnswers = []; 
+		$NextQuestions=$QuestionResult[$index]['id'];
+		
+		$query = "select  QC.text,QC.que_id,QT.correct_choise_pos,QC.position from question_choices QC INNER JOIN questions QT ON QC.que_id=QT.id  AND  QT.id = $NextQuestions  limit 4" ;
+		$result = mysqli_query($con, $query);
+		$QuestionsAnswers = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+		if($QuestionsAnswers['correct_choise_pos'] === $QuestionsAnswers['position']){
+			$QuestionsAnswers['text'] = $CorrectAnswer;
+			$QuestionsAnswers['4']= $CorrectAnswer;}
+			
+		else
+			for($j=1;$j<=3;$j++) {
+			 if ($j==1){
+			 $QuestionsAnswers['text']= $WrongAns1;
+			 $SendQuestionsAnswers[$j]=$WrongAns1;}
+			 elseif($j==2){
+			 $QuestionsAnswers['text']= $WrongAns2;
+			 $SendQuestionsAnswers[$j]=$WrongAns2;}
+			 else {
+			 $QuestionsAnswers['text']= $WrongAns3;
+			 $SendQuestionsAnswers[$j]=$WrongAns3;
+			}
+			
+			
+			// $QuestionsAnswers['text'] =$WrongAns($j);//check or switch 
+			//SendQuestionsAnswers[$j]=$WrongAns($j);//WIll it run?
+			
+								}
+        $index++;
+		return 	$SendQuestionsAnswers;	}
+	
 	function startTest() {
 		header("location: nikosTest.php");
 	}
