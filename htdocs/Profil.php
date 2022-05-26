@@ -46,8 +46,8 @@ session_start();
         <ol class="nav_links" >
           <li><a href="ChooseTest.php"><button> Home Page </button></a></li>
           <li><a href="profile.html"><button> Profile </button></a></li>
-          <li><a href="#"><button> Contact us </button></a></li>
-          <li><a class="logoutButton" href="welcome.html"><button>Logout</button></a></li>
+          <!-- <li><a href="#"><button> Contact us </button></a></li> -->
+          <li><a class="logoutButton" href="../html/welcome.html"><button>Logout</button></a></li>
         </ol>
       </nav>
     </header>

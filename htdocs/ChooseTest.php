@@ -52,9 +52,9 @@
     
       <nav>
         <ol class="nav_links" >
-          <li><a  href="ChooseTest.php"><button> Home Page </button></a></li>
+          <li><a  href="ChooseDifficulty.php"><button> Home Page </button></a></li>
           <li><a href="Profil.php"><button> Profile </button></a></li>
-          <li><a href="#"><button> Contact us </button></a></li>
+          <!-- <li><a href="#"><button> Contact us </button></a></li> -->
           <li><a class="logoutButton" href="../html/welcome.html"><button>Logout</button></a></li>
         </ol>
       </nav>
@@ -65,25 +65,25 @@
     <ul>
       <br><br>
         <li>
-          <a href="ChooseTest.php">
+          <a href="ChooseDifficulty.php">
             <span>Geography</span>
           </a>
         </li>
 
         <li>
-          <a href="ChooseTest.php">
+          <a href="ChooseDifficulty.php">
             <span>Tecnology</span>
           </a>
         </li>
 
         <li>
-          <a href="ChooseTest.php">
+          <a href="ChooseDifficulty.php">
             <span>History</span>
           </a>
         </li>
 
         <li>
-          <a href="ChooseTest.php">
+          <a href="ChooseDifficulty.php">
             <span>Arts</span>
           </a>
         </li>
