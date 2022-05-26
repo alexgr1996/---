@@ -3,10 +3,14 @@
 
 	include("connection.php");
 	include("functions.php");
-
-    // if($_SERVER['REQUEST_METHOD'] == "POST") {
-	 $ChosenCategory = $con->query("select description from categories");
-     $ChosenDifficulty = $con->query("select difficulty from questions");
+  $ChosenCategory =  $_POST['Cname'];
+    
+  
+  
+  
+  
+  // if($_SERVER['REQUEST_METHOD'] == "POST") {
+    
     //  getQuestion($con,$ChosenDifficulty,$ChosenCategory); // int int 
     //  $index=0;
     // function sentQuestions($con,$index,$QuestionResult){
@@ -60,37 +64,41 @@
       </nav>
   </header>
 
+<form method=POST> 
 <div class="container"> <section ></section>
     <ul>
     <div class="choose-a-category">Choose a category</div>
       <br><br>
         <li>
           <a href="ChooseDifficulty.php">
-            <span>Geography</span>
+            <span Cname= "1">Geography</span>
           </a>
         </li>
 
         <li>
           <a href="ChooseDifficulty.php">
-            <span>Tecnology</span>
+            <span Cname="2" >Tecnology</span>
           </a>
         </li>
 
         <li>
           <a href="ChooseDifficulty.php">
-            <span>History</span>
+            <span  Cname="3" >History</span>
           </a>
         </li>
 
         <li>
           <a href="ChooseDifficulty.php">
-            <span>Arts</span>
+            <span Cname="4" >Arts</span>
           </a>
         </li>
     </ul>
   <br><br>
   <br><br>
 </div>
+</form>
+
+
 
 
 
