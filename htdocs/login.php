@@ -45,50 +45,57 @@ session_start();
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8"> -->
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../css/bootstrap.css">
-  <link rel="stylesheet" href="../css/our.css"> -->
-  <!-- <script type="text/javascript" src="../js/javascript.js"> -->
 
-	<title>Login</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/our.css">
+  <link rel="stylesheet" href="../css/test.css">
+  <link rel="stylesheet" href="../css/info.css">
+
+  <script type="text/javascript" src="../js/javascript.js"></script>
+  <title>Login</title>
 </head>
 <body>
 
-	<style type="text/css">
-	
-	#text{
+  <header>
+    <img class="logo circular--square" src="../html/lg.jpg" alt="logo">
+  </header>
 
-		height: 25px;
-		border-radius: 5px;
-		padding: 4px;
-		border: solid thin #aaa;
-		width: 100%;
-	}
+  <br>
+  <div class="center">
+    <h2>Login</h2>
+    <p style="text-align: center;">Σύνδεση στο σύστημα squiz</p>
+    <form class="" method="post">
+      <div class="txt_field"> <br>
+        <label class="label">Username:</label>
+        <input type="text"  id="name" name="user_name"  >
+      </div><br>
+      <div class="txt_field">
+        <label>Password</label>
+        <input type="password" id="password" name="password" >
+      </div><br>
 
-	#button{
+      
+<!-- class="btn btn-myButton" -->
+      <div class="pass" name="forgotPasswordButton"><a href="forgot.php">Forgot Password?</a></div>
+      <input type="submit" value="Login"> 
+     
+<!-- class="btn btn-myButton"  -->
+      <div class="signup_link" name="logInButton" ><br>
+        Not a member? <a href="signup.php">Sign Up</a>
+      </div>
 
-		padding: 10px;
-		width: 100px;
-		color: white;
-		background-color: lightblue;
-		border: none;
-	}
+    </form>
+  </div>
 
-	#box{
+</body>
+</html>
 
-		background-color: grey;
-		margin: auto;
-		width: 300px;
-		padding: 20px;
-	}
-
-	</style>
-
-	<div id="box">
+	<!-- <div id="box">
 		
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
@@ -101,4 +108,4 @@ session_start();
 		</form>
 	</div>
 </body>
-</html>
+</html> -->
