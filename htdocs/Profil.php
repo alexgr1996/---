@@ -51,19 +51,28 @@ session_start();
 
         <div class="container">
         <h2>
-            <span>
-                <?php echo $user_data['user_name']; ?>
-            </span> info
+            ACCOUNT INFORMATION
         </h2>
 
         <table>
             <tr>
-            <th>quiz</th>
-            <th>difficulty</th>
+                <th>ID</th>
+                <td><?php echo $user_data['user_id']; ?></td>
             </tr>
+
             <tr>
-            <td>quiz id</td>
-            <td>difficulty</td>
+                <th>USERNAME</th>
+                <td><?php echo $user_data['user_name']; ?></td>
+            </tr>
+
+            <tr>
+                <th>EMAIL</th>
+                <td><?php echo $user_data['user_mail']; ?></td>
+            </tr>
+
+            <tr>
+                <th>DATE</th>
+                <td><?php echo $user_data['date']; ?></td>
             </tr>
         </table>
         </div>
