@@ -63,6 +63,7 @@
 
 <div class="container"> <section ></section>
     <ul>
+    <div class="choose-a-category">Choose a category</div>
       <br><br>
         <li>
           <a href="ChooseDifficulty.php">
