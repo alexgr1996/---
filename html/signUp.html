@@ -4,35 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <title>Document</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/our.css">
+  <link rel="stylesheet" href="../css/test.css">
+  <link rel="stylesheet" href="../css/info.css">
+
+  <script type="text/javascript" src="/js/javascript.js"></script>
+
+  <title>Sign Up</title>
 </head>
 <body>
 
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <h2>Sign Up:</h2>
-      <h3 style="text-align: center;">Εγγραφή στο σύστημα squiz</h3>
-    </div>
-  </div>
+  <header>
+    <img class="logo circular--square" src="lg.jpg" alt="logo">
+  </header>
+<br>
 
-  <div class="row center">
-    <div class="col-md-6 offset-md-3">
-        <form class="" action="index.html" method="post">
-          <input type="text" id="name" name="name" placeholder="USERNAME..."><br>
-          <input type="text" id="password" name="password" placeholder="PASSWORD..."><br>
-          <input type="text" id="passwordConfirmation" name="password" placeholder="PASSWORD AGAIN...">
-        </form>
-        <br>
-        <a href="/website/login.html">
-          <button type="submit" name="signUpButton" class="btn btn-primary">
-            CREATE ACCOUNT
-          </button>
-        </a>
-      </div>
-  </div>
+<div class="center">
+  <h2>Sing Up</h2>
+  <p style="text-align: center;">Σύνδεση στο σύστημα squiz</p>
+<!-- action= index.html or login.html-->
+  <form class="" action="main.html" method="post">
 
-  
+          <div class="txt_field"> <br>
+            <label class="label">Username:</label>
+            <input type="text"  id="name" name="name"  >
+          </div><br>
+
+          <div class="txt_field">
+            <label>Password</label>
+            <input type="password" id="password" name="password" >
+          </div><br>
+
+          <div class="txt_field">
+            <label>Password Again:</label>
+            <input type="password"  id="passwordConfirmation" name="password" >
+          </div><br>
+
+    <input type="submit" value="Create Account" name="signUpButton" class="btn btn-primary"> 
+  </form>
+</div>
+
+
+
 
 </body>
 </html>

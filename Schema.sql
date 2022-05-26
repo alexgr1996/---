@@ -6,25 +6,34 @@ create table users(
 	 password varchar(255),
 	 date timestamp
 );
-
-create table codes(
-	id BIGINT AUTO_INCREMENT PRIMARY KEY,
-	email varchar(100),
-	code varchar(5),
-	expire int(11),
-	FOREIGN KEY (email) REFERENCES users(user_mail)
-
+CREATE TABLE codes (
+    id int NOT NULL AUTO_INCREMENT,
+    email varchar(100),
+    code varchar(5),
+    expire int(11),
+    PRIMARY KEY (id),
+    KEY FK_mail (email),
+    CONSTRAINT FK_mail FOREIGN KEY (email)
+    REFERENCES users(user_mail)
 );
 
-create table Quiz_Executions(
- 	ExecId int AUTO_INCREMENT PRIMARY KEY,
-	UserId int,
-  	AsID int,
-	quiz_date timestamp,
-	quiz_sxore int not null,
-	FOREIGN KEY (UserId) REFERENCES Users(UserId),
-	FOREIGN KEY (AsID) REFERENCES Assessments(AsID) 
-);
+CREATE TABLE IF NOT EXISTS `executed_quizzes` (
+`question_id` BIGINT AUTO_INCREMENT NOT NULL,
+`question_text` VARCHAR(255) NOT NULL,
+`correct_answer` VARCHAR(255) NOT NULL,
+`wrong_answer` VARCHAR(255) NOT NULL,
+`wrong_answer2` VARCHAR(255) NOT NULL,
+`wrong_answer3` VARCHAR(255) NOT NULL,
+`difficulty` INT NOT NULL,
+`category` VARCHAR(255) NOT NULL,
+`quiz_user_id` BIGINT NOT NULL,
+`quiz_id` BIGINT NOT NULL,
+`user_answer` VARCHAR(255) NOT NULL,
+DATE TIMESTAMP NOT NULL ,
+PRIMARY KEY (`question_id`),
+KEY `exec_quiz_user_fk` (`quiz_user_id`),
+CONSTRAINT `exec_quiz_user_fk` FOREIGN KEY (`quiz_user_id`) REFERENCES `users` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=INNODB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
