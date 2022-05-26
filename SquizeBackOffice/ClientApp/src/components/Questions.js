@@ -26,7 +26,7 @@ export class Questions extends Component {
     emptyEntity = {
         id: 0,
         difficulty: 1,
-        correntChoisePos: 1,
+        correctChoicePos: 1,
         questionText: null,
         categoryId: 0,
         category: {
@@ -166,7 +166,10 @@ export class Questions extends Component {
 
     validateEntity(entity) {
         return entity.questionText.trim() &&
-            entity.categoryId;
+            entity.categoryId &&
+            entity.difficulty >= 1 && entity.difficulty <= 5 &&
+            entity.correctChoicePos >= 1 && entity.correctChoicePos <= 4
+
     }
 
     saveEntity() {
@@ -311,6 +314,16 @@ export class Questions extends Component {
                         <AutoComplete id="category" value={this.state.entity.category.description} suggestions={this.state.filteredCategories} completeMethod={this.searchCategory} field="description" dropdown forceSelection onChange={(e) => this.onSelectChange(e, 'category', 'categoryId')} className={classNames({ 'p-invalid': this.state.submitted && !this.state.entity.categoryId })} />
 
                         {this.state.submitted && !this.state.entity.categoryId && <small className="p-error">Η Κατηγορία είναι υποχρεωτική!</small>}
+                    </div>
+                    <div className="field">
+                        <label htmlFor="difficulty">Βαθμός Δυσκολίας (1-5)</label>
+                        <InputText id="difficulty" value={this.state.entity.difficulty} onChange={(e) => this.onInputChange(e, 'difficulty')} required autoFocus className={classNames({ 'p-invalid': this.state.submitted && (this.state.entity.difficulty < 1 || this.state.entity.difficulty > 5)})} />
+                        {this.state.submitted && (this.state.entity.difficulty < 1 || this.state.entity.difficulty > 5) && <small className="p-error">Ο Βαθμός Δυσκολίας (1-5) είναι υποχρεωτικός!</small>}
+                    </div>
+                    <div className="field">
+                        <label htmlFor="correctChoicePos">Σωστή απάντηση (1-4)</label>
+                        <InputText id="correctChoicePos" value={this.state.entity.correctChoicePos} onChange={(e) => this.onInputChange(e, 'correctChoicePos')} required autoFocus className={classNames({ 'p-invalid': this.state.submitted && (this.state.entity.correctChoicePos < 1 || this.state.entity.correctChoicePos > 4) })} />
+                        {this.state.submitted && (this.state.entity.correctChoicePos < 1 || this.state.entity.correctChoicePos > 4) && <small className="p-error">Η Σωστή απάντηση (1-4) είναι υποχρεωτική!</small>}
                     </div>
                     <div className="card p-fluid">
                         <DataTable value={this.state.entity.questionChoices} editMode="row" dataKey="id"
