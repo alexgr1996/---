@@ -29,9 +29,6 @@ button {
   transition: all 0.3s ease 0s;
 }
 
-
-
-
 li {
   display: inline-block;
   padding: 15px 30px;
@@ -56,21 +53,22 @@ a:hover {
   transition: 3s;
 }
 
-
+/*
 img {
   max-width: 10%;
   max-height: 100px;
 }
 
+*/
+
+.logo {
+  cursor: pointer;
+  max-width: 7.6%;
+  height: auto;
+}
 
 .circular--square { 
   border-radius: 50%; 
-}
-
-.logo {
-    cursor: pointer;
-    max-width: 7.6%;
-    height: auto;
 }
 
 .nav_links {
@@ -91,7 +89,6 @@ img {
 }
 
 
-
 button:hover {  
   background-color: rgba(169, 0, 45, 0.8);
 }
@@ -105,6 +102,7 @@ button:hover {
   align-items: center;
 }
 
+/*
 .center {
   display: flex;
   max-width: 500px;
@@ -112,6 +110,7 @@ button:hover {
   align-items: center;
   height: 200px;
 }
+*/
 
 .center-periexomena {
   margin-left: auto;

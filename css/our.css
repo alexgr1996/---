@@ -12,6 +12,82 @@
   padding: 0;
 }*/
 
+ul li a span {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  color: #333;
+  letter-spacing: 4px;
+  transition: 0.5s;
+}
+
+/* toixaki dipla  */
+ul li a:before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  transform: 0.5s;
+  transform: rotate(0deg) skewY(-45deg) ;
+}
+
+
+
+/* toixos apo katw. 
+//eixe hdh skia kai twra me to katw kommati 
+//tha mpei toixaki
+*/
+ul li a:after{
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  transform: 0.5s;
+  transform: rotate(0deg) skewX(-45deg) ;
+}
+
+
+/* sikoma koutiou me to pou paei to pontiki epanw */
+ul li a:hover{
+  transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
+  box-shadow: -50px 50px 50px 50px rgba(0,0,0,0.5);
+
+} 
+
+/* otan paei panw to potniki xrwma aspro */
+ul li:hover .fa{
+  color: #fff;
+}
+
+ul li:hover span{
+  color: #fff;
+}
+
+
+/*h panw epifania toy koympiou  */
+ul li:hover a{
+  background: #dd4b39;
+}
+
+/* mikro toixaki */
+ul li:hover a:before{
+  background: #b33a2b;
+}
+
+/* plai megalo toixaki xrwma */
+ul li:hover a:after{
+  background: #e66a5a;
+}
+
+
+
 
 
 li, a, button {
@@ -23,12 +99,10 @@ li, a, button {
 }
 
 header {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 10%;
-  
 }
 
 .logo {
@@ -70,7 +144,6 @@ button:hover {
 */
 
 
-
   div.relative {
     position: relative;
   }
@@ -93,27 +166,21 @@ button:hover {
     width: 100px;
   }
   
-  
-  h2 {
+  h2 , h3 {
     text-align: center;
   }
 
-  h3 {
-    text-align: center;
-  }
-  
   .center {
   text-align: center;
-  margin-left: 500px;
-  margin-right: 500px;
-  padding: 40px;
+  background: white;
+  border-radius: 50px;
+  padding: 50px;
+  align-items: center;
+  position: relative;
   }
-  
-  /*
-  .my-block {
-  
-  }
-  */
+/*  display: flex;
+    min-height: 100px;  */
+
   
   .submit {
     color: black;
@@ -132,6 +199,167 @@ button:hover {
   
   
   /*  g   */
+
+
+  
+  .center h2{
+    text-align: center;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid silver;
+  }
+
+  .center form{
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  form .txt-field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 20px 0;
+
+  }
+
+  .txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 30px;
+    font-size: 10px;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+
+  .txt-field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+  }
+
+
+  .txt-field input:focus ~ label,
+  .txt-field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+  
+  }
+
+  .txt-field input:focus ~ span::before,
+  .txt-field input:valid ~ span::before{
+    width: 100%;
+  
+  }
+
+  .pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+  }
+ .pass:hover{
+   text-decoration: underline;
+ }
+ 
+ input[type="submit"]{
+   width: 100%;
+   height: 50px;
+   border: 1px solid;
+   background: #2691d9;
+   border-radius: 25px;
+   font-size: 18px;
+   color: #fff;
+   font-weight: 700;
+   cursor: pointer;
+   outline: none;
+ }
+
+ input[type="text"],
+ input[type="password"]
+ {
+  background: lightgrey;
+  border-radius: 30px;
+ }
+
+ input[type="submit"]:hover{
+  border-color:#2691d9 ;
+  transition: .5s;
+ }
+
+
+ .singup_link{
+   margin: 30px 0;
+   text-align: center;
+   font-size: 16px;
+   color: #666666;
+ }
+
+
+.singup_link a{
+  color: #2691d9;
+  text-decoration: none;
+}
+
+
+.singup_link a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/*
+
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-
+  gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(../html/65.jpg);  /* bg */  
+  
+  /*
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar{
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+.content{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.content h1{
+  font-size: 70px;
+  margin-top: 80px;
+}
+
+.content p{
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+
+*/
 
 /* logo color: #F4FD88 */
 
@@ -171,7 +399,7 @@ section{
 
     border-radius: 3rem;
     font-size: 0.80rem;
-    font-weight: bold; 
+    /* font-weight: bold;  */
     cursor:pointer;
     background-color:transparent;
     background-image: linear-gradient(to bottom right, #CE9461, #E5CB9F  );
@@ -190,73 +418,11 @@ section{
 
 }
 
-
-
-/* RADIUS BUTTON NO..
-button{
-  font-size: 1rem;
-  padding:.5rem 2rem;
-  cursor:pointer;
-  position:relative;
-  background-color:black;
-  border-radius: 5px;
-  color:white;
-  overflow:hidden;
-}
-
-button span{
-  position:relative;
-  z-index: 2;
-}
-
-button::before{
-  content: '';
-  position: absolute;
-  inset: -.5rem;
-  background-image: linear-gradient(to right, blue, red);
-  animation: rotate 300ms linear infinite;
-  animation-play-state:paused;
-}
-
-button:hover::before{
-  animation-play-state:running;
-}
-
-button:active{
-  trnasform:scale(.95);
+.pin{
+  text-align: center;
 }
 
 
-@keyframes rotate
-
-  from { transform: rotate(0); }
-  to { transform: rotate(360deg); }
-
-button::after {
-  content: '';
-  position: absolute;
-  inset: 2rem;
-  background-color: black;
-  border-radius:5px;
-}
-*/
-
-/*
-#logo{
-  float: left;
-  width: 100px;
-  height: 100px;
-  margin-top:10px;
-  margin-left:10px;
-  background-color:#F4FD88;
-}
-*/
-
-
-
-
-
-  
   article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
   }
@@ -272,13 +438,18 @@ button::after {
     color: #212529;
     text-align: left;
     background-color: #fff;
+
+        background: linear-gradient(120deg,#FCFFE7, #8e44ad);
+       
     */
-    font-family: Helvetica, sans-serif;
+    font-family: monteserrat;
     background: #FCFFE7;
+    height: 100vh;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: #87644574;
+    margin: 0;
   }
   

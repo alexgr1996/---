@@ -23,9 +23,7 @@
   <link rel="stylesheet" href="../css/test.css">
   <link rel="stylesheet" href="../css/info.css">
 
-  <script type="text/javascript" src="/js/javascript.js">
-
-  </script>
+  <script type="text/javascript" src="/js/javascript.js"></script>
   <title>Login</title>
 </head>
 <body>
@@ -34,41 +32,37 @@
     <img class="logo circular--square" src="lg.jpg" alt="logo">
   </header>
 
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <h2>Login:</h2>
-      <h3 style="text-align: center;">Σύνδεση στο σύστημα squiz</h3>
-    </div>
+  <br>
+  
+  <div class="center">
+    <h2>Login</h2>
+    <p style="text-align: center;">Σύνδεση στο σύστημα squiz</p>
+    <form class="" action="main.html" method="post">
+      <div class="txt_field"> <br>
+        <label class="label">Username:</label>
+        <input type="text"  id="name" name="name"  >
+      </div><br>
+      <div class="txt_field">
+        <label>Password</label>
+        <input type="password" id="password" name="password" >
+      </div><br>
+
+      
+<!-- class="btn btn-myButton" -->
+      <div class="pass" name="forgotPasswordButton"><a href="forgotPassword.html">Forgot Password?</a></div>
+      <input type="submit" value="Login"> 
+     
+<!-- class="btn btn-myButton"  -->
+      <div class="signup_link" name="logInButton" ><br>
+        Not a member? <a href="signUp.html">Sign Up</a>
+      </div>
+
+    </form>
   </div>
 
-  <div class="row center">
-    <div class="col-md-6 offset-md-3">
-      <form class="" action="main.html" method="post">
-        <input type="text" id="name" name="name" placeholder="USERNAME..."><br>
-        <input type="text" id="password" name="password" placeholder="PASSWORD..."><br>
-      </form>
-      <br>
-      <a href="test.html">
-        <button type="submit" name="logInButton" class="btn btn-myButton" onclick="handleSubmit()">
-          <b>LOGIN</b>
-        </button>
-      </a>
-      <br><br>
 
-      <a href="signUp.html">
-        <button type="button" name="logInButton" class="btn btn-myButton">
-          <b>SIGN UP</b>
-        </button>
-        <br><br>
-      </a>
 
-      <a href="forgotPassword.html">
-        <button type="button" name="forgotPasswordButton" class="btn btn-myButton">
-          <b>FORGOT MY PASSWORD</b>
-        </button>
-      </a>
-    </div>
-  </div>
+
 
 </body>
 </html>
