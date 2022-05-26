@@ -46,7 +46,7 @@ session_start();
 
 			header("Location: login.php");
 			die;
-		}else
+		} else
 		{
 			echo "Please enter some valid information!";
 		}
@@ -93,7 +93,7 @@ session_start();
 			<div class="txt_field"> <br>
               <label class="label">Email:</label>
               <input type="text" id="name" name="user_mail"  >
-            </div><br>
+            </div>
 
             <div class="txt_field"> <br>
               <label class="label">Username:</label>
