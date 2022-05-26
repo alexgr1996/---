@@ -80,10 +80,11 @@
                      session_start();
                         while($rows = $ChosenCategory->fetch_assoc() ){
                             $category_name = $rows['description'];
-                            echo "<option value='$category_name'>$category_name</option>";   
+                            echo "<option value='$category_name'>$category_name</option>";
+                            $_SESSION['cname'] = $category_name;   
                         }
                         
-                        $_SESSION['cname'] = $category_name;
+                
     
                     ?>
                     </select>
