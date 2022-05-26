@@ -26,8 +26,8 @@ session_start();
   </head>
   <body>
   
-    <div class="WebContainer">
-        <header>
+    <div class="web_container">
+        <header id="header">
             <img class="logo circular--square" src="../html/lg.jpg" alt="logo">
             <nav>
             <ul class="nav_links">
