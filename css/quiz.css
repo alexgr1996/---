@@ -31,6 +31,7 @@
     border-radius: 18px;
     padding: 5px 20px;
     outline: none;
+    background-color: lightgray;
   }
 
   .btn:hover {
@@ -102,6 +103,8 @@
     border-radius:  15px;
   }
 
+/*
+
   .qa_header{
     color: #fff;
     display: flex;
@@ -158,8 +161,7 @@
     background-color: #f93c3c;
   }
   */
-
-  .qa_ans_row input[valid]:checked + span{
+  /*.qa_ans_row input[valid]:checked + span{
     background-color: greenyellow;
     color: #fff;
   }
