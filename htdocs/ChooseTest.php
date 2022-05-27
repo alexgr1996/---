@@ -3,7 +3,7 @@
 
 	include("connection.php");
 	include("functions.php");
-  $ChosenCategory =  $_POST['Cname'];
+  // $ChosenCategory =  $_POST['Cname'];
     
   
   

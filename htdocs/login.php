@@ -59,6 +59,12 @@ session_start();
 
   <script type="text/javascript" src="../js/javascript.js"></script>
   <title>Login</title>
+  <style>
+    a{
+      color: red ;
+    }
+
+  </style>
 </head>
 <body>
 

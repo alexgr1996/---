@@ -2,7 +2,7 @@
 	include("connection.php");
   include("functions.php");
   
- $ChosenDifficulty = $_POST['Dname'];
+//  $ChosenDifficulty = $_POST['Dname'];
 ?>
 
 
@@ -46,9 +46,9 @@
     <section>
       <!--style="margin-right:5px;" -->
         <h3 style="margin-right:10px;" >Chose a level: <br>
-              <div><button class="neon" Dname="1" ><a href="quiz.php"> Easy </a></button> </div>
-              <div><button class="neon" Dname="2"><a href="quiz.php"> Medium </a></button> </div>
-              <button class="neon" Dname="3"><a href="quiz.php"> Hard </a></button> 
+              <div><button class="neon" Dname="1" ><a href="../html/quiz.html"> Easy </a></button> </div>
+              <div><button class="neon" Dname="2"><a href="../html/quiz.html"> Medium </a></button> </div>
+              <button class="neon" Dname="3"><a href="../html/quiz.html"> Hard </a></button> 
         </h3>
     </section>   
    </div>
