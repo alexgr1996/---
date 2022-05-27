@@ -103,7 +103,7 @@
     border-radius:  15px;
   }
 
-/*
+
 
   .qa_header{
     color: #fff;
@@ -156,22 +156,24 @@
     background-color: #9ab5ac;
   }
 
-  /*
+
+  
   .qa_ans_row input:checked + spna{
     background-color: #f93c3c;
   }
-  */
-  /*.qa_ans_row input[valid]:checked + span{
+  
+
+  .qa_ans_row input[valid]:checked + span{
     background-color: greenyellow;
     color: #fff;
   }
 
-  /*
+  
   .qa_footer{
     padding: 10px 0 0;
     text-align:right;
   }
-  */
+  
 
   /* Start Quiz Button  */
   .start-btn button{
