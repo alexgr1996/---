@@ -121,7 +121,7 @@ var skip = document.getElementById('skip');
 var score = document.getElementById('score');
 var totalScore = document.getElementById('totalScore');
 var countdown = document.getElementById('countdown');
-var count =0;
+var count = 0;
 var scoreCount = 0;
 var duration = 0;
 
