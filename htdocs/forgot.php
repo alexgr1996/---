@@ -61,7 +61,7 @@ include("functions.php");
 				}elseif(!isset($_SESSION['forgot']['email']) || !isset($_SESSION['forgot']['code'])){
 					header("Location: forgot.php");
 					die;
-				}else{
+				}elseif(!empty($password) &&!empty($password)){
 					
 					save_password($con,$password);
 					if(isset($_SESSION['forgot'])){
@@ -71,6 +71,8 @@ include("functions.php");
 					header("Location: login.php");
 					die;
 				}
+				else 
+				$error[] = "Passwords can not be empty";
 				break;
 			
 			default:
@@ -177,8 +179,8 @@ include("functions.php");
 							?>
 							</span>
 
-							<input class="textbox" type="text" name="password" placeholder="Password"><br>
-							<input class="textbox" type="text" name="password2" placeholder="Retype Password"><br>
+							<input class="textbox" type="password" name="password" placeholder="Password"><br>
+							<input class="textbox" type="password" name="password2" placeholder="Retype Password"><br>
 							<br style="clear: both;">
 							<input type="submit" value="Next" style="float: right;">
 							<a href="forgot.php">

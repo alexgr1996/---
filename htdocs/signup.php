@@ -1,6 +1,7 @@
 <?php 
 session_start();
 
+
 	include("connection.php");
 	include("functions.php");
     $Error = "";
@@ -21,16 +22,16 @@ session_start();
 		}
 		
 		elseif(mysqli_num_rows($sname)) {
-			echo "This username already exists";
+			$Error = "This username already exists";
 		}
 		
 		elseif(mysqli_num_rows($smail)) {
-			echo "This email already exists";
+			$Error = "This email already exists";
 		}
 		
 		
 		elseif($con_pass !== $password) {
-			echo "Password and confirm Password are not the same!";
+			$Error = "Password and confirm Password are not the same!";
 		}
 
 		elseif(!empty($user_name) && !empty($password) && !empty($user_mail) && !is_numeric($user_name))
@@ -48,7 +49,7 @@ session_start();
 			die;
 		} else
 		{
-			echo "Please enter some valid information!";
+			$Error = "Please enter some valid information!";
 		}
 	}
 ?>
@@ -82,12 +83,16 @@ session_start();
     <p style="text-align: center;">Σύνδεση στο σύστημα squiz</p>
 	<!-- action= index.html or login.html-->
     <form class="" method="post">
-	<div><?php 
+	<div>
+		<span style="font-size: 12px;color:red;">
+		<?php 
 				if(isset($Error) && $Error != "")
 				{
 					echo $Error;
 				}
-			?></div>
+		?>
+		</span>
+	</div>
 
 
 			<div class="txt_field"> <br>

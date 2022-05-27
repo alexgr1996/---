@@ -18,7 +18,7 @@ function send_mail($recipient,$subject,$message)
   $mail->Host       = "smtp.gmail.com";
   //$mail->Host       = "smtp.mail.yahoo.com";
   $mail->Username   = "adopse123@gmail.com";
-  $mail->Password   = "!a12345678";
+  $mail->Password   = "qotwdkgfojpojzqi";
 
   $mail->IsHTML(true);
   $mail->AddAddress($recipient, "esteemed user");
@@ -30,12 +30,12 @@ function send_mail($recipient,$subject,$message)
 
   $mail->MsgHTML($content); 
   if(!$mail->Send()) {
-    //echo "Error while sending Email.";
-    //echo "<pre>";
-    //var_dump($mail);
+    // echo "Error while sending Email.";
+    // echo "<pre>";
+    // var_dump($mail);
     return false;
   } else {
-    //echo "Email sent successfully";
+    // echo "Email sent successfully";
     return true;
   }
 

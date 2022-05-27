@@ -4,6 +4,7 @@ session_start();
 
 	include("connection.php");
 	include("functions.php");
+	$Error = "";
 
 
 	if($_SERVER['REQUEST_METHOD'] == "POST")
@@ -34,10 +35,10 @@ session_start();
 				}
 			}
 			
-			echo "wrong username or password!";
+			$Error = "wrong username or password!";
 		}else
 		{
-			echo "wrong username or password!";
+			$Error = "wrong username or password!";
 		}
 	}
 
@@ -58,6 +59,12 @@ session_start();
 
   <script type="text/javascript" src="../js/javascript.js"></script>
   <title>Login</title>
+  <style>
+    a{
+      color: red ;
+    }
+
+  </style>
 </head>
 <body>
 
@@ -70,7 +77,16 @@ session_start();
     <h2>Login</h2>
     <p style="text-align: center;">Σύνδεση στο σύστημα squiz</p>
     <form class="" method="post">
-      <div class="txt_field"> <br>
+      <div class="txt_field"> 
+	  <span style="font-size: 12px;color:red;">
+		<?php 
+				if(isset($Error) && $Error != "")
+				{
+					echo $Error;
+				}
+		?>
+		</span>
+		<br>
         <label class="label">Username:</label>
         <input type="text"  id="name" name="user_name"  >
       </div><br>
